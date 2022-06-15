@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Ζωντανή Ροή"
+        android:id="@+id/live_flow"/>
+    <item
+        android:title="Ομαδικά Στατιστικά"
+        android:id="@+id/live_team_stats"
+        />
+    <item
+        android:title="Ατομικά Στατιστικά"
+        android:id="@+id/live_personal_stats"/>
+</menu>

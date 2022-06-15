@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/parke_2"
+tools:context=".action">
+
+<include
+    android:id="@+id/include"
+    layout="@layout/toolbar_menu"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/playerlabel"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/teal_700"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+
+        <TextView
+            android:id="@+id/TextAction"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Action made by:"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/actionSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerlabel" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@+id/actionSpinner"
+        app:layout_constraintEnd_toEndOf="@id/actionSpinner"
+        app:layout_constraintTop_toTopOf="@+id/actionSpinner" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/incert"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:padding="1dp"
+        android:background="#BD1616"
+        android:onClick="displayToast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actionSpinner"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Tooltip"
+        app:strokeColor="@android:color/black"
+        app:strokeWidth="3dp">
+
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Καταχώρηση"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/incert"
+        app:layout_constraintEnd_toEndOf="@+id/incert"
+        app:layout_constraintStart_toStartOf="@+id/incert"
+        app:layout_constraintTop_toTopOf="@+id/incert" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

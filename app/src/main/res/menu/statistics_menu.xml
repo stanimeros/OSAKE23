@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/live_team_stats"
+        android:title="Ομαδικά Στατιστικά"
+        />
+    <item
+        android:id="@+id/live_personal_stats"
+        android:title="Ατομικά Στατιστικά"
+        />
+</menu>

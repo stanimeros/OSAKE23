@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/parke_2"
+    tools:context=".create_a_team">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="#D3048185"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <EditText
+            android:id="@+id/player_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:shadowColor="@color/white"
+            android:text="Ονομα Παίκτη"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:padding="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/positionSpinner"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="#BA048185"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@+id/positionSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/positionSpinner"
+        app:layout_constraintTop_toTopOf="@+id/positionSpinner" />
+
+    <Spinner
+        android:id="@+id/teamSpinner"
+        android:layout_width="315dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:background="#BE048185"
+        app:layout_constraintEnd_toEndOf="@+id/positionSpinner"
+        app:layout_constraintStart_toStartOf="@+id/positionSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/positionSpinner" />
+
+    <ImageView
+        android:id="@+id/arrow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        app:layout_constraintBottom_toBottomOf="@+id/teamSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/teamSpinner"
+        app:layout_constraintTop_toTopOf="@+id/teamSpinner" />
+
+    <LinearLayout
+        android:id="@+id/player_photo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="@+id/teamSpinner"
+        app:layout_constraintStart_toStartOf="@+id/teamSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/teamSpinner">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_attach_file_24" />
+
+        <EditText
+            android:id="@+id/pathView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="Φωτογραφία"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="2dp"
+        android:onClick="displayToast"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/player_photo"
+        app:layout_constraintStart_toStartOf="@+id/player_photo"
+        app:layout_constraintTop_toBottomOf="@+id/player_photo">
+
+        <Button
+            android:id="@+id/incert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:background="#BD1616"
+            android:text="Καταχώρηση Παίκτη"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

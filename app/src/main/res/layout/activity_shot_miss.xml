@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_200"
+    tools:context=".shot_miss">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar_live"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/live_scoreboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/playerlabel"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/teal_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_sports_basketball_24" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Shooter:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/shooterSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/teal_200"
+                app:layout_constraintEnd_toStartOf="@+id/arrow"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/playerlabel" />
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="@+id/shooterSpinner"
+                app:layout_constraintEnd_toEndOf="@+id/shooterSpinner"
+                app:layout_constraintTop_toTopOf="@+id/shooterSpinner" />
+
+            <LinearLayout
+                android:id="@+id/pointlabel"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/teal_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/shooterSpinner">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_123_24" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Points:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/pointsSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/teal_200"
+                app:layout_constraintEnd_toStartOf="@+id/arrow2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pointlabel" />
+
+            <ImageView
+                android:id="@+id/arrow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="@+id/pointsSpinner"
+                app:layout_constraintEnd_toEndOf="@id/pointsSpinner"
+                app:layout_constraintTop_toTopOf="@+id/pointsSpinner" />
+
+
+            <LinearLayout
+                android:id="@+id/assistslabel"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/teal_700"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pointsSpinner">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_back_hand_24" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="Rebοund by:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <Spinner
+                android:id="@+id/rebοunderSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/teal_200"
+                app:layout_constraintEnd_toStartOf="@+id/arrow3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/assistslabel" />
+
+            <ImageView
+                android:id="@+id/arrow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="@+id/rebοunderSpinner"
+                app:layout_constraintEnd_toEndOf="@+id/rebοunderSpinner"
+                app:layout_constraintTop_toTopOf="@+id/rebοunderSpinner" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/incert"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:background="#BD1616"
+                android:onClick="displayToast"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rebοunderSpinner"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Tooltip"
+                app:strokeColor="@android:color/holo_orange_dark"
+                app:strokeWidth="3dp">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Καταχώρηση"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/incert"
+                app:layout_constraintEnd_toEndOf="@+id/incert"
+                app:layout_constraintStart_toStartOf="@+id/incert"
+                app:layout_constraintTop_toTopOf="@+id/incert" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

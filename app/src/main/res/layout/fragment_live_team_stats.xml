@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_live_team_stats"
+    android:background="@color/purple_200"
+    tools:context=".live_team_stats">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="49dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+                <View
+                    android:id="@+id/view11"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view10" />
+                <View
+                    android:id="@+id/view12"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+                <View
+                    android:id="@+id/view13"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view12" />
+
+                <View
+                    android:id="@+id/view14"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+                <View
+                    android:id="@+id/view15"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="39dp"
+                    android:background="#70583D"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view14" />
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/layouteam1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tripontaNumTeam1"
+                        style="@style/statistics"
+                        android:text="1/1" />
+
+                    <TextView
+                        android:id="@+id/dipontaNumTeam1"
+                        style="@style/statistics"
+                        android:text="0/0" />
+
+                    <TextView
+                        android:id="@+id/eleutheraNumTeam1"
+                        style="@style/statistics"
+                        android:text="0/0" />
+
+                    <TextView
+                        android:id="@+id/reboundsNumTeam1"
+                        style="@style/statistics"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/assistsNumTeam1"
+                        style="@style/statistics"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/kopsimataNumTeam1"
+                        style="@style/statistics"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/klepsimataNumTeam1"
+                        style="@style/statistics"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/lathoiNumTeam1"
+                        style="@style/statistics"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/faoulNumTeam1"
+                        style="@style/statistics"
+                        android:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layouText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toStartOf="@+id/layouteam2"
+                    app:layout_constraintStart_toEndOf="@+id/layouteam1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/triponta"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Τρίποντα" />
+
+                    <TextView
+                        android:id="@+id/diponta"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Δίποντα" />
+
+                    <TextView
+                        android:id="@+id/eleutheres"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Ελεύθερες βολές" />
+
+                    <TextView
+                        android:id="@+id/rebounds"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Pιμπάουντς" />
+
+                    <TextView
+                        android:id="@+id/assists"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Ασσίστς" />
+
+                    <TextView
+                        android:id="@+id/kopsimata"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Κοψίματα" />
+
+                    <TextView
+                        android:id="@+id/klepsimata"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Κλεψίματα" />
+
+                    <TextView
+                        android:id="@+id/lathoi"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Λάθη" />
+
+                    <TextView
+                        android:id="@+id/faoul"
+                        style="@style/statistics"
+                        android:gravity="center_horizontal"
+                        android:text="Φάουλς" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layouteam2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingEnd="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tripontaNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="1/1" />
+
+                    <TextView
+                        android:id="@+id/dipontaNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="0/0" />
+
+                    <TextView
+                        android:id="@+id/eleutheraNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="0/0" />
+
+                    <TextView
+                        android:id="@+id/reboundsNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/assistsNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/kopsimataNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/klepsimataNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/lathoiNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/faoulNumTeam2"
+                        style="@style/statistics"
+                        android:gravity="end"
+                        android:text="1" />
+
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

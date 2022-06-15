@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Letsgo</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="players">
+        <item>Ξενοφών</item>
+        <item>Παντέλος</item>
+        <item>Player3</item>
+        <item>Player4</item>
+        <item>Player5</item>
+        <item>Player6</item>
+        <item>Player7</item>
+        <item>Player8</item>
+
+    </string-array>
+
+    <string-array name="teams">
+        <item>Team1</item>
+        <item>Team2</item>
+        <item>Team3</item>
+        <item>Team4</item>
+        <item>Team5</item>
+        <item>Team6</item>
+        <item>Team7</item>
+        <item>Team8</item>
+        <item>Team9</item>
+        <item>Team10</item>
+
+    </string-array>
+
+    <string-array name="positions">
+        <item>Point Guard</item>
+        <item>Guard</item>
+        <item>Forward</item>
+        <item>Power Forward</item>
+        <item>Center</item>
+
+    </string-array>
+
+    <string-array name="points">
+        <item>Ελεύθερη βολή</item>
+        <item>Δίποντο</item>
+        <item>Τρίποντο</item>
+
+    </string-array>
+
+</resources>

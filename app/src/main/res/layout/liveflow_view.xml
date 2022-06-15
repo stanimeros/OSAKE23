@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/purple_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/flowStart"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginVertical="20dp"
+        android:padding="1dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Tooltip"
+        app:strokeColor="@color/black"
+        app:strokeWidth="1dp" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="5dp"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintBottom_toTopOf="@+id/flowStart"
+        app:layout_constraintEnd_toEndOf="@+id/flowStart"
+        app:layout_constraintStart_toStartOf="@+id/flowStart" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="5dp"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_orange_dark"
+        app:layout_constraintEnd_toEndOf="@+id/flowStart"
+        app:layout_constraintStart_toStartOf="@+id/flowStart"
+        app:layout_constraintTop_toBottomOf="@+id/flowStart" />
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        app:layout_constraintBottom_toBottomOf="@+id/flowStart"
+        app:layout_constraintEnd_toEndOf="@+id/flowStart"
+        app:layout_constraintStart_toStartOf="@+id/flowStart"
+        app:layout_constraintTop_toTopOf="@+id/flowStart" />
+
+    <LinearLayout
+        android:id="@+id/Team1stage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/flowStart"
+        app:layout_constraintEnd_toStartOf="@+id/flowStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/flowStart">
+
+        <TextView
+            android:id="@+id/Team1action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rebound:"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/Team1actionPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Ioannis Papagiannis"
+            android:textColor="@color/white"
+            android:gravity="end" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Team2stage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="150dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/flowStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flowStart"
+        app:layout_constraintTop_toTopOf="@+id/flowStart">
+
+        <TextView
+            android:id="@+id/Team2action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shoot:"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/Team2actionPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Giannoulhs Larentzakhs"
+            android:textColor="@color/white"
+            android:gravity="end" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
