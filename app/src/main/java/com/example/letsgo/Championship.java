@@ -35,6 +35,9 @@ public class Championship {
         mySQLConnection.Insert("TRUNCATE TABLE statistics");
         MySQL.ThreadStart(mySQLConnection);
 
+        mySQLConnection.Insert("TRUNCATE TABLE flow");
+        MySQL.ThreadStart(mySQLConnection);
+
         MySQL.setCurrentRound(1);
 
         ArrayList<String> temp = new ArrayList<>();

@@ -151,6 +151,16 @@ public class MySQL {
         return mySQLConnection.getResults();
     }
 
+    public static ArrayList<String> getTopPlayers()
+    {
+        MySQLConnection mySQLConnection = new MySQLConnection();
+        mySQLConnection.Select("SELECT players.name,players.position,team,rebounds,assists,three_points " +
+                "FROM statistics INNER JOIN players on players.name = statistics.name WHERE round="+getCurrentRound()+
+                " ORDER BY three_points DESC");
+        MySQL.ThreadStart(mySQLConnection);
+        return mySQLConnection.getResults();
+    }
+
     public static ArrayList<String> getTeamMatchStatistics(String team,int round)
     {
         MySQLConnection mySQLConnection = new MySQLConnection();

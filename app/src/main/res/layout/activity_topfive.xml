@@ -205,13 +205,13 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/pos1"
             style="@style/positions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/player1"
             android:layout_toEndOf="@+id/number1"
-            android:text="Shooting Guard"/>
+            android:text="Shooting Guard" />
 
     </RelativeLayout>
 
