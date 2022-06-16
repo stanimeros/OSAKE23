@@ -16,7 +16,6 @@
         <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/activity_previous_matches_statistics.xml" value="0.5208333333333334" />
         <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/activity_shot_score.xml" value="0.5107252298263534" />
         <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/activity_team_scores.xml" value="0.5208333333333334" />
-        <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/activity_topfive.xml" value="0.5208333333333334" />
         <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/fragment_first_team.xml" value="0.5208333333333334" />
         <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/fragment_game_management.xml" value="0.67" />
         <entry key="..\:/Dev/csc/code/android-studio/osake_2/app/src/main/res/layout/fragment_gamecard.xml" value="0.5208333333333334" />
@@ -77,6 +76,44 @@
         <entry key="..\:/Users/xenof/Letsgo/app/src/main/res/menu/personal_stats_menu.xml" value="0.1" />
         <entry key="..\:/Users/xenof/Letsgo/app/src/main/res/menu/statistics_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/xenof/Letsgo/app/src/main/res/menu/teams_p_s.xml" value="0.365625" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_action.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_admin.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_admin_matches.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_club_stats.xml" value="0.14720812182741116" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_clubs.xml" value="0.1" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_create_a_player.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_create_a_team.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_ingame.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_matches.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_menu_admin.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_menu_fan.xml" value="0.1" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_previous_games.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_previous_matches_statistics.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_shot_miss.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_substitution.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_team_scores.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/activity_topfive.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_club_personal_stats.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_club_team_stats.xml" value="0.1" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_first_team.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_game_management.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_gamecard.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_live_flow.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_live_personal_stats.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_live_team_stats.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/fragment_second_team.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/live_scoreboard.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/live_scoreboard_admin.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/liveflow_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/match_button.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/my_spinner_dropdown_style.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/players_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/team_scores_view.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/layout/toolbar_live.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/menu/club_statistics.xml" value="0.365625" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/menu/personal_stats_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/xenof/OSAKE23/app/src/main/res/menu/statistics_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/xenof/osake/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.1305" />
         <entry key="..\:/Users/xenof/osake/app/src/main/res/layout/activity_action.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/xenof/osake/app/src/main/res/layout/activity_admin.xml" value="0.36666666666666664" />

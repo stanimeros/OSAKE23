@@ -27,7 +27,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentBottom="true"
                 android:gravity="center"
-                android:text="5"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
@@ -38,7 +38,7 @@
                 android:layout_height="match_parent"
                 android:layout_toStartOf="@+id/rebaunts1"
                 android:layout_toEndOf="@+id/number1"
-                android:text="Γιαννούλης Λαρεντζάκης"
+                android:text="Player name"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -50,7 +50,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@+id/assists1"
                 android:gravity="center"
-                android:text="1"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
@@ -61,7 +61,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_toStartOf="@+id/Points1"
                 android:gravity="center"
-                android:text="12"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
@@ -72,7 +72,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:gravity="center"
-                android:text="24"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
@@ -85,9 +85,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="18dp"
-                android:layout_toStartOf="@+id/minutes1"
                 android:layout_toEndOf="@+id/number1"
-                android:text="Shooting Guard" />
+                android:text="position" />
 
 
         </RelativeLayout>

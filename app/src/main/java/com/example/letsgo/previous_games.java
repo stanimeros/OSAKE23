@@ -25,12 +25,6 @@ public class previous_games extends AppCompatActivity {
             public void onClick(View v) {gotomenufan();}
         });
 
-        Button matchBtn = findViewById(R.id.override);
-        matchBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {gotomatches();}
-        });
-
         layoutList = findViewById(R.id.layoutList);
 
         try {

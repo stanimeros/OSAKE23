@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/club_team_stats"
+        android:title="Ομαδικά Στατιστικά"
+        />
+    <item
+        android:id="@+id/club_personal_stats"
+        android:title="Ατομικά Στατιστικά"
+        />
+
+</menu>

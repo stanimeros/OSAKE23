@@ -22,7 +22,6 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/panathinaikos"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/line2"
             app:layout_constraintTop_toTopOf="parent" />
@@ -33,19 +32,18 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginTop="20dp"
-            android:src="@drawable/olympiacos"
             app:layout_constraintEnd_toStartOf="@+id/line1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/team1name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Ολυμπιακός"
+            android:text="team1"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/team1logo"
             app:layout_constraintStart_toStartOf="@+id/team1logo"
@@ -53,12 +51,12 @@
 
         <TextView
             android:id="@+id/team2name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Παναθηναϊκός"
+            android:text="team2"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/team2logo"
             app:layout_constraintStart_toStartOf="@+id/team2logo"
@@ -76,7 +74,7 @@
 
         <View
             android:id="@+id/view5"
-            android:layout_width="120dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:background="@color/teal_200"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -95,30 +93,38 @@
 
         <TextView
             android:id="@+id/timeboard"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="4:13"
+            android:text="00:00"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="@+id/view5"
-            app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="@+id/view5"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/scoreboard"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="333 - 833"
+            android:text="0 - 0"
             android:textColor="@color/white"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="@+id/view5"
             app:layout_constraintStart_toStartOf="@+id/view5"
             app:layout_constraintTop_toBottomOf="@+id/timeboard" />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_pause_presentation_24"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/view5"
+            app:layout_constraintTop_toBottomOf="@+id/scoreboard" />
 
         <Button
             android:id="@+id/startbtn"
@@ -129,24 +135,23 @@
             android:textSize="12sp"
             android:textColor="@color/white"
             android:background="#BD1616"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
             app:layout_constraintEnd_toEndOf="@+id/view5"
             app:layout_constraintStart_toStartOf="@+id/view5"
-            app:layout_constraintTop_toBottomOf="@+id/scoreboard"
+            app:layout_constraintTop_toBottomOf="@+id/pause"
             app:layout_constraintVertical_bias="0.777"/>
 
         <TextView
             android:id="@+id/periodboard"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="1η Περίοδος"
+            android:text="Περίοδος"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+            android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="@+id/view5"
             app:layout_constraintStart_toStartOf="@+id/view5"
-            app:layout_constraintTop_toBottomOf="@+id/scoreboard"
+            app:layout_constraintTop_toBottomOf="@+id/pause"
             app:layout_constraintVertical_bias="0.777" />
 
         <EditText

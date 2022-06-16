@@ -25,56 +25,47 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/number1"
+                android:id="@+id/number"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="1"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/team1"
-                android:layout_width="185dp"
+                android:id="@+id/team"
+                android:layout_width="191dp"
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
-                android:text="Ηρακλής"
+                android:text="Team"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/minutes1"
-                android:layout_width="40dp"
+                android:id="@+id/games"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="16"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/rebaunts1"
-                android:layout_width="40dp"
+                android:id="@+id/wins"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="1"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/assists1"
-                android:layout_width="40dp"
+                android:id="@+id/loses"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="17"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/Points1"
-                android:layout_width="70dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="33"
+                android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 

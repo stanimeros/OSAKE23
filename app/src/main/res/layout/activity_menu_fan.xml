@@ -31,7 +31,7 @@
         android:padding="5dp"
         android:background="@color/teal_200"
         android:gravity="center"
-        android:text="2η Αγωνιστική"
+        android:text="No Connection"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,46 +71,40 @@
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/statistika"
                 android:layout_width="336dp"
                 android:layout_height="71dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
                 android:background="@color/teal_700"
                 android:text="στατιστικα προηγουμενων αγωνων"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/matchesoftheday"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toBottomOf="@+id/matchesoftheday" />
 
             <Button
                 android:id="@+id/teamScores"
                 android:layout_width="336dp"
                 android:layout_height="71dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
                 android:background="@color/teal_700"
                 android:text="βαθμολογια"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/statistika"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintTop_toBottomOf="@+id/statistika" />
 
             <Button
                 android:id="@+id/topfive"
                 android:layout_width="336dp"
                 android:layout_height="71dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
                 android:background="@color/teal_700"
                 android:text="καλυτερη 5-αδα"
                 android:textColor="@color/white"
@@ -118,6 +112,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/teamScores" />
+
+            <Button
+                android:id="@+id/clubstats"
+                android:layout_width="336dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_700"
+                android:text="στατιστικα ομαδων"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topfive"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

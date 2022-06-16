@@ -15,6 +15,7 @@ public class menu_fan extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_fan);
 
+        Button clubstats = findViewById(R.id.clubstats);
         Button matches = findViewById(R.id.matchesoftheday);
         Button topfive = findViewById(R.id.topfive);
         Button teamScores = findViewById(R.id.teamScores);
@@ -27,6 +28,13 @@ public class menu_fan extends AppCompatActivity {
         }catch (Exception e){
             System.out.println(e);
         }
+
+        clubstats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoclubs();
+            }
+        });
 
         matches.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,6 +72,12 @@ public class menu_fan extends AppCompatActivity {
         });
 
     }
+
+    private void gotoclubs(){
+        Intent intent = new Intent(this, clubs.class);
+        startActivity(intent);
+    }
+
     private void gotomatches(){
         Intent intent = new Intent(this, matches.class);
         startActivity(intent);

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/club_statistics"
+    app:startDestination="@id/club_team_stats">
+
+    <fragment
+        android:id="@+id/club_team_stats"
+        android:name="com.example.letsgo.club_team_stats"
+        android:label="fragment_club_team_stats"
+        tools:layout="@layout/fragment_club_team_stats" />
+    <fragment
+        android:id="@+id/club_personal_stats"
+        android:name="com.example.letsgo.club_personal_stats"
+        android:label="fragment_club_personal_stats"
+        tools:layout="@layout/fragment_club_personal_stats" />
+</navigation>
