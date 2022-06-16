@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class MySQL {
 
     public static final int START_TIME = 15000;
-    public static final String IP = "192.168.2.9";
+    public static final String IP = "192.168.2.99";
 
     public static MySQLConnection ThreadStart (MySQLConnection mySQL)
     {
         Thread t = new Thread(mySQL);
         try {
             t.start();
-            t.join();
+            t.join(1500);
         } catch (Exception e) {
             e.printStackTrace();
         }
