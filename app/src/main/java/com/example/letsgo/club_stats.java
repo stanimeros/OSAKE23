@@ -25,7 +25,6 @@ public class club_stats extends AppCompatActivity {
         });
 
         Bundle bundle = getIntent().getExtras();
-        String name = bundle.getString("name");
 
         BottomNavigationView bottomNavigationView;
         club_team_stats club_team_stats = new club_team_stats();

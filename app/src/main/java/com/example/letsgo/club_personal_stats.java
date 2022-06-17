@@ -2,6 +2,8 @@ package com.example.letsgo;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,21 +47,7 @@ public class club_personal_stats extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_club_personal_stats, container, false);
-        layoutList = view.findViewById(R.id.layoutList);
-        try {
-            Bundle bundle = getArguments();
-            name = bundle.getString("name");
-            players = MySQL.getPlayerNames(name);
-
-            for(int i=0;i<players.size();i++){
-                addView(i);
-            }
-        }catch (Exception e)
-        {
-            System.out.println(e);
-        }
-        return view;
+        return inflater.inflate(R.layout.fragment_club_personal_stats, container, false);
     }
 
     private void addView(int i){
@@ -67,19 +55,14 @@ public class club_personal_stats extends Fragment {
         Player p = MySQL.getPlayer(players.get(i),name);
 
         TextView p1 = playersView.findViewById(R.id.player1);
-
-
-        /*
-
         p1.setText(p.getName());
-
 
         TextView p2 = playersView.findViewById(R.id.position1);
         p2.setText(p.getPosition());
 
-        TextView p3 = playersView.findViewById(R.id.rebaunts1);
-        TextView p4 = playersView.findViewById(R.id.assists1);
-        TextView p5 = playersView.findViewById(R.id.Points1);
+        TextView p3 = playersView.findViewById(R.id.losses);
+        TextView p4 = playersView.findViewById(R.id.rounds);
+        TextView p5 = playersView.findViewById(R.id.points1);
         try {
             p3.setText(MySQL.getPlayerAllStatistics(p.getName(),name).get(6));
             p4.setText(MySQL.getPlayerAllStatistics(p.getName(),name).get(7));
@@ -95,9 +78,27 @@ public class club_personal_stats extends Fragment {
             p5.setText("0");
         }
 
-         */
-
         playersView.setId(View.generateViewId());
         layoutList.addView(playersView);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        layoutList = view.findViewById(R.id.layoutList);
+        try {
+            Bundle bundle = getArguments();
+            name = bundle.getString("name");
+            players = MySQL.getPlayerNames(name);
+
+            for(int i=0;i<players.size();i++){
+                addView(i);
+            }
+        }catch (Exception e)
+        {
+            System.out.println(e);
+        }
+
     }
 }
