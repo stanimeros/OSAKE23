@@ -35,14 +35,6 @@ public class matches extends AppCompatActivity  {
             }
         });
 
-        Button ovbtn = findViewById(R.id.override);
-        ovbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotogame();
-            }
-        });
-
         layoutList = findViewById(R.id.layoutList);
 
         try {

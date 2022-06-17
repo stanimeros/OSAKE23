@@ -1,11 +1,17 @@
 package com.example.letsgo;
 
 import android.os.Bundle;
+
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
+
+import android.os.Handler;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
@@ -18,8 +24,11 @@ public class live_flow extends Fragment {
     private String mParam2;
 
     ArrayList<String> flow;
+    ArrayList<String> temp;
     Match m;
     int id;
+
+    ScrollView sv;
 
     public live_flow() {}
 
@@ -47,24 +56,26 @@ public class live_flow extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
          View view = inflater.inflate(R.layout.fragment_live_flow, container, false);
         layoutList = view.findViewById(R.id.layoutList);
+        sv = view.findViewById(R.id.fragment_live_flow);
 
-         try {
-             Bundle bundle = getArguments();
-             id = bundle.getInt("id");
-             m = MySQL.getMatch(id);
+        try {
+            Bundle bundle = getArguments();
+            id = bundle.getInt("id");
+            m = MySQL.getMatch(id);
 
-             flow = MySQL.getFlow(m.getId());
-             for(int i=0;i<flow.size();i=i+5){
-                 addView(i);
-             }
-         }catch (Exception e){
-             System.out.println(e);
-         }
+            flow = MySQL.getFlow(m.getId());
+            for(int i=0;i<flow.size();i=i+5){
+                addView(i,flow);
+                sv.fullScroll(getView().FOCUS_DOWN);
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
         return view;
     }
 
-    private void addView(int i){
+    private void addView(int i,ArrayList<String> flow){
         View live_flow_view = getLayoutInflater().inflate(R.layout.liveflow_view, null, false);
 
         TextView t1 = live_flow_view.findViewById(R.id.Team1action);
@@ -105,5 +116,53 @@ public class live_flow extends Fragment {
 
         live_flow_view.setId(View.generateViewId());
         layoutList.addView(live_flow_view);
+    }
+
+    private void updateFlow()
+    {
+        try {
+            Bundle bundle = getArguments();
+            id = bundle.getInt("id");
+            m = MySQL.getMatch(id);
+
+            temp = MySQL.getFlow(m.getId());
+
+            for (int i=0;i<flow.size();i++)
+            {
+                temp.remove(0);
+            }
+
+            for(int i=0;i<temp.size();i=i+5){
+                addView(i,temp);
+                sv.fullScroll(getView().FOCUS_DOWN);
+                for (int j=0;j<5;j++)
+                {
+                    flow.add(temp.get(i+j));
+                }
+            }
+        }catch (Exception e){
+            System.out.println(e);
+        }
+    }
+
+    Handler handler = new Handler();
+    Runnable runnable;
+    int delay = 2000;
+
+    @Override
+    public void onResume() {
+        try{
+            handler.postDelayed(runnable = new Runnable() {
+                public void run() {
+                    handler.postDelayed(runnable, delay);
+                    updateFlow();
+                }
+            }, delay);
+            super.onResume();
+        }catch (Exception e){}}
+    @Override
+    public void onPause() {
+        super.onPause();
+        handler.removeCallbacks(runnable); //stop handler when activity not visible super.onPause();
     }
 }

@@ -35,14 +35,6 @@ public class admin_matches extends AppCompatActivity {
             }
         });
 
-        Button ovbtn = findViewById(R.id.override);
-        ovbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotomanagement();
-            }
-        });
-
         layoutList = findViewById(R.id.layoutList);
 
         try {

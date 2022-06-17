@@ -69,7 +69,7 @@ public class admin extends AppCompatActivity {
         gamecard.setArguments(bundle);
         game_management.setArguments(bundle);
 
-        ImageView imgButton = findViewById(R.id.team1logo);
+        ImageView imgButton = findViewById(R.id.pause);
         imgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
