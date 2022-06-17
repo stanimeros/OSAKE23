@@ -36,7 +36,7 @@
                 android:id="@+id/player1"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:layout_toStartOf="@+id/rebaunts1"
+                android:layout_toStartOf="@+id/losses"
                 android:layout_toEndOf="@+id/number1"
                 android:text="Player name"
                 android:textColor="@color/white"
@@ -44,29 +44,29 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/rebaunts1"
+                android:id="@+id/losses"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/assists1"
+                android:layout_toStartOf="@+id/rounds"
                 android:gravity="center"
                 android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/assists1"
+                android:id="@+id/rounds"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
-                android:layout_toStartOf="@+id/Points1"
+                android:layout_toStartOf="@+id/points1"
                 android:gravity="center"
                 android:text="0"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/Points1"
+                android:id="@+id/points1"
                 android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"

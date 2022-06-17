@@ -45,23 +45,23 @@ public class teamScores extends AppCompatActivity {
 
         View teamsView = getLayoutInflater().inflate(R.layout.team_scores_view, null, false);
 
-        TextView t0 = teamsView.findViewById(R.id.number);
+        TextView t0 = teamsView.findViewById(R.id.number1);
         t0.setText(""+(i+tableColumns)/4);
 
-        TextView t1 = teamsView.findViewById(R.id.team);
+        TextView t1 = teamsView.findViewById(R.id.team1);
         t1.setText(scoreboard.get(i));
 
-        TextView t2= teamsView.findViewById(R.id.games);
+        TextView t2= teamsView.findViewById(R.id.wins);
         t2.setText(scoreboard.get(i+1));
 
-        TextView t3 = teamsView.findViewById(R.id.wins);
+        TextView t3 = teamsView.findViewById(R.id.losses);
         t3.setText(scoreboard.get(i+2));
 
-        TextView t4 = teamsView.findViewById(R.id.loses);
+        TextView t4 = teamsView.findViewById(R.id.rounds);
         t4.setText(scoreboard.get(i+3));
 
-//        TextView t5 = teamsView.findViewById(R.id.Points1);
-//        t5.setText(scoreboard.get(i+4));
+        TextView t5 = teamsView.findViewById(R.id.points1);
+        t5.setText(scoreboard.get(i+4));
 
         teamsView.setId(View.generateViewId());
         layoutList.addView(teamsView);

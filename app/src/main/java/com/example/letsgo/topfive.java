@@ -30,9 +30,9 @@ public class topfive extends AppCompatActivity {
             TextView t1 = findViewById(R.id.player1);
             TextView t2 = findViewById(R.id.pos1);
             TextView t3 = findViewById(R.id.team1);
-            TextView t4 = findViewById(R.id.rebaunts1);
-            TextView t5 = findViewById(R.id.assists1);
-            TextView t6 = findViewById(R.id.Points1);
+            TextView t4 = findViewById(R.id.losses);
+            TextView t5 = findViewById(R.id.rounds);
+            TextView t6 = findViewById(R.id.points1);
 
             int i=0;
             t1.setText(topPlayersInfo.get(0));

@@ -73,9 +73,9 @@ public class first_team extends Fragment {
         TextView p2 = playersView.findViewById(R.id.position1);
         p2.setText(p.getPosition());
 
-        TextView p3 = playersView.findViewById(R.id.rebaunts1);
-        TextView p4 = playersView.findViewById(R.id.assists1);
-        TextView p5 = playersView.findViewById(R.id.Points1);
+        TextView p3 = playersView.findViewById(R.id.losses);
+        TextView p4 = playersView.findViewById(R.id.rounds);
+        TextView p5 = playersView.findViewById(R.id.points1);
         try {
             p3.setText(MySQL.getPlayerMatchStatistics(p.getName(),m.getRound()).get(9));
             p4.setText(MySQL.getPlayerMatchStatistics(p.getName(),m.getRound()).get(10));

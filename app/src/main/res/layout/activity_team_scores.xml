@@ -57,7 +57,7 @@
         <TextView
             android:id="@+id/number"
             android:layout_width="40dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:gravity="center"
             android:text="#"
             android:textColor="@color/white"
@@ -65,37 +65,46 @@
 
         <TextView
             android:id="@+id/team"
-            android:layout_width="191dp"
-            android:layout_height="match_parent"
+            android:layout_width="185dp"
+            android:layout_height="30dp"
             android:gravity="center_vertical"
             android:text="Ομάδα"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/games"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
+            android:id="@+id/minutes"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
             android:gravity="center"
-            android:text="Παιχ."
-            android:textColor="@color/white"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/wins"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Νίκες"
+            android:text="Ν"
             android:textColor="@color/white"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/loses"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
             android:gravity="center"
-            android:text="Ήττες"
+            android:text="Η"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/games"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Αγ"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Βαθμ."
             android:textColor="@color/white"
             android:textSize="18sp" />
 

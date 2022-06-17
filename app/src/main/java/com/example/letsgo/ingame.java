@@ -23,6 +23,7 @@ public class ingame extends AppCompatActivity {
     CountDownTimer timer;
     TextView periodboard;
     TextView timeboard;
+    TextView score;
     boolean running = false;
     boolean finished = false;
     Match m;
@@ -43,7 +44,7 @@ public class ingame extends AppCompatActivity {
         TextView t1 = findViewById(R.id.team2name);
         t1.setText(m.getAway());
 
-        TextView score = findViewById(R.id.scoreboard);
+        score = findViewById(R.id.scoreboard);
         String sc = MySQL.getMatchColumn(m.getId(), "homePoints") + "  -  " + MySQL.getMatchColumn(m.getId(), "awayPoints");
         score.setText(sc);
 
@@ -196,6 +197,9 @@ public class ingame extends AppCompatActivity {
         {
             periodboard.setText(MySQL.getMatchColumn(m.getId(),"period")+"η Περίοδος");
         }
+
+        String sc = MySQL.getMatchColumn(m.getId(), "homePoints") + "  -  " + MySQL.getMatchColumn(m.getId(), "awayPoints");
+        score.setText(sc);
     }
 
     private int getCurrentSeconds(){
