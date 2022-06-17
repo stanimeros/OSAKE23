@@ -79,7 +79,7 @@ public class second_team extends Fragment {
         try {
             p3.setText(MySQL.getPlayerMatchStatistics(p.getName(),m.getRound()).get(9));
             p4.setText(MySQL.getPlayerMatchStatistics(p.getName(),m.getRound()).get(10));
-
+            
             int points = 0;
             points += Integer.parseInt(MySQL.getPlayerMatchStatistics(p.getName(), m.getRound()).get(3)) * 3;
             points += Integer.parseInt(MySQL.getPlayerMatchStatistics(p.getName(), m.getRound()).get(5)) * 2;

@@ -45,13 +45,12 @@ public class first_team extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_first_team, container, false);
-
         try {
             Bundle bundle = getArguments();
             id = bundle.getInt("id");
+
             m = MySQL.getMatch(id);
             players = MySQL.getPlayerNames(m.getHome());
-
             layoutList = view.findViewById(R.id.layoutList);
             for(int i=0;i<players.size();i++){
                 addView(i);
@@ -65,6 +64,7 @@ public class first_team extends Fragment {
 
     private void addView(int i){
         View playersView = getLayoutInflater().inflate(R.layout.players_view, null, false);
+
         Player p = MySQL.getPlayer(players.get(i),m.getHome());
 
         TextView p1 = playersView.findViewById(R.id.player1);
@@ -90,7 +90,6 @@ public class first_team extends Fragment {
             p4.setText("0");
             p5.setText("0");
         }
-
         playersView.setId(View.generateViewId());
         layoutList.addView(playersView);
     }

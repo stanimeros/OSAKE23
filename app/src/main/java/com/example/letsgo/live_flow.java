@@ -2,12 +2,10 @@ package com.example.letsgo;
 
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -66,12 +64,10 @@ public class live_flow extends Fragment {
             flow = MySQL.getFlow(m.getId());
             for(int i=0;i<flow.size();i=i+5){
                 addView(i,flow);
-                sv.fullScroll(getView().FOCUS_DOWN);
             }
         }catch (Exception e){
             System.out.println(e);
         }
-
         return view;
     }
 
@@ -134,7 +130,6 @@ public class live_flow extends Fragment {
 
             for(int i=0;i<temp.size();i=i+5){
                 addView(i,temp);
-                sv.fullScroll(getView().FOCUS_DOWN);
                 for (int j=0;j<5;j++)
                 {
                     flow.add(temp.get(i+j));

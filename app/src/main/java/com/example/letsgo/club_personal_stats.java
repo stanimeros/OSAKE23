@@ -3,40 +3,24 @@ package com.example.letsgo;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link club_personal_stats#newInstance} factory method to
- * create an instance of this fragment.
- */
+import java.util.ArrayList;
+
 public class club_personal_stats extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public club_personal_stats() {
-        // Required empty public constructor
-    }
+    public club_personal_stats() {}
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment club_personal_stats.
-     */
-    // TODO: Rename and change types and number of parameters
     public static club_personal_stats newInstance(String param1, String param2) {
         club_personal_stats fragment = new club_personal_stats();
         Bundle args = new Bundle();
@@ -55,10 +39,65 @@ public class club_personal_stats extends Fragment {
         }
     }
 
+    ArrayList<String> players;
+    LinearLayout layoutList;
+    String name;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_club_personal_stats, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_club_personal_stats, container, false);
+        layoutList = view.findViewById(R.id.layoutList);
+        try {
+            Bundle bundle = getArguments();
+            name = bundle.getString("name");
+            players = MySQL.getPlayerNames(name);
+
+            for(int i=0;i<players.size();i++){
+                addView(i);
+            }
+        }catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return view;
+    }
+
+    private void addView(int i){
+        View playersView = getLayoutInflater().inflate(R.layout.players_view, null, false);
+        Player p = MySQL.getPlayer(players.get(i),name);
+
+        TextView p1 = playersView.findViewById(R.id.player1);
+
+
+        /*
+
+        p1.setText(p.getName());
+
+
+        TextView p2 = playersView.findViewById(R.id.position1);
+        p2.setText(p.getPosition());
+
+        TextView p3 = playersView.findViewById(R.id.rebaunts1);
+        TextView p4 = playersView.findViewById(R.id.assists1);
+        TextView p5 = playersView.findViewById(R.id.Points1);
+        try {
+            p3.setText(MySQL.getPlayerAllStatistics(p.getName(),name).get(6));
+            p4.setText(MySQL.getPlayerAllStatistics(p.getName(),name).get(7));
+
+            int points = 0;
+            points += Integer.parseInt(MySQL.getPlayerAllStatistics(p.getName(),name).get(0)) * 3;
+            points += Integer.parseInt(MySQL.getPlayerAllStatistics(p.getName(),name).get(2)) * 2;
+            points += Integer.parseInt(MySQL.getPlayerAllStatistics(p.getName(),name).get(4));
+            p5.setText(String.format("%d", points));
+        }catch (Exception e){
+            p3.setText("0");
+            p4.setText("0");
+            p5.setText("0");
+        }
+
+         */
+
+        playersView.setId(View.generateViewId());
+        layoutList.addView(playersView);
     }
 }

@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,28 +18,14 @@ import android.view.ViewGroup;
  */
 public class club_team_stats extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public club_team_stats() {
-        // Required empty public constructor
-    }
+    public club_team_stats() {}
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment club_team_stats.
-     */
-    // TODO: Rename and change types and number of parameters
     public static club_team_stats newInstance(String param1, String param2) {
         club_team_stats fragment = new club_team_stats();
         Bundle args = new Bundle();
@@ -56,9 +45,51 @@ public class club_team_stats extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_club_team_stats, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_club_team_stats, container, false);
+        Bundle bundle = getArguments();
+        String name = bundle.getString("name");
+
+        new Thread(){
+            public void run(){
+                ArrayList<String> stats = MySQL.getTeamAllStatistics(name);
+
+                //TEAM 1
+                TextView t1 = view.findViewById(R.id.tripontaNumTeam2);
+                TextView t2 = view.findViewById(R.id.dipontaNumTeam2);
+                TextView t3 = view.findViewById(R.id.eleutheraNumTeam2);
+                if (stats.get(0)==null)
+                {
+                    t1.setText("");
+                    t2.setText("");
+                    t3.setText("");
+                }else
+                {
+                    t1.setText(stats.get(0)+"/"+stats.get(1));
+                    t2.setText(stats.get(2)+"/"+stats.get(3));
+                    t3.setText(stats.get(4)+"/"+stats.get(5));
+                }
+
+                TextView t4 = view.findViewById(R.id.reboundsNumTeam2);
+                t4.setText(stats.get(6));
+
+                TextView t5 = view.findViewById(R.id.assistsNumTeam2);
+                t5.setText(stats.get(7));
+
+                TextView t6= view.findViewById(R.id.kopsimataNumTeam2);
+                t6.setText(stats.get(8));
+
+                TextView t7= view.findViewById(R.id.klepsimataNumTeam2);
+                t7.setText(stats.get(9));
+
+                TextView t8= view.findViewById(R.id.lathoiNumTeam2);
+                t8.setText(stats.get(10));
+
+                TextView t9= view.findViewById(R.id.faoulNumTeam2);
+                t9.setText(stats.get(11));
+            }
+        }.start();
+
+        return view;
     }
 }

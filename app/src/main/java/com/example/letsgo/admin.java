@@ -73,17 +73,20 @@ public class admin extends AppCompatActivity {
         imgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (MySQL.getMatchColumn(id,"break")!=0){
-                    startTimer();
-                    stopped = false;
-                    MySQL.setMatchColumn(id,"timestamp",getCurrentSeconds() -
-                            (MySQL.getMatchColumn(id,"break") - MySQL.getMatchColumn(id,"timestamp")) +"");
-                    MySQL.setMatchColumn(id,"break",(0+""));
-                }else
+                if (start.getVisibility()==View.GONE)
                 {
-                    pauseTimer();
-                    stopped=true;
-                    MySQL.setMatchColumn(id,"break",(getCurrentSeconds()+""));
+                    if (MySQL.getMatchColumn(id,"break")!=0){
+                        startTimer();
+                        stopped = false;
+                        MySQL.setMatchColumn(id,"timestamp",getCurrentSeconds() -
+                                (MySQL.getMatchColumn(id,"break") - MySQL.getMatchColumn(id,"timestamp")) +"");
+                        MySQL.setMatchColumn(id,"break",(0+""));
+                    }else
+                    {
+                        pauseTimer();
+                        stopped=true;
+                        MySQL.setMatchColumn(id,"break",(getCurrentSeconds()+""));
+                    }
                 }
             }
         });

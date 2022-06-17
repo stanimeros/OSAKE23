@@ -12,7 +12,7 @@ public class MySQL {
         Thread t = new Thread(mySQL);
         try {
             t.start();
-            t.join(1500);
+            t.join(2000);
         } catch (Exception e) {
             e.printStackTrace();
         }

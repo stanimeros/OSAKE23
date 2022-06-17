@@ -2,14 +2,12 @@ package com.example.letsgo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -23,12 +21,18 @@ public class club_stats extends AppCompatActivity {
         ImageView backbtn = findViewById(R.id.back);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {gotomenufan();}
+            public void onClick(View v) {gotoclub();}
         });
+
+        Bundle bundle = getIntent().getExtras();
+        String name = bundle.getString("name");
 
         BottomNavigationView bottomNavigationView;
         club_team_stats club_team_stats = new club_team_stats();
         club_personal_stats club_personal_stats = new club_personal_stats();
+
+        club_team_stats.setArguments(bundle);
+        club_personal_stats.setArguments(bundle);
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView5);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView5,club_team_stats).commit();
@@ -50,8 +54,8 @@ public class club_stats extends AppCompatActivity {
         });
     }
 
-    private void gotomenufan(){
-        Intent intent = new Intent(this, menu_fan.class);
+    private void gotoclub(){
+        Intent intent = new Intent(this, clubs.class);
         startActivity(intent);
     }
 }
