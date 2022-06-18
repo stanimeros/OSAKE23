@@ -50,81 +50,78 @@ public class live_team_stats extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        new Thread(){
-            public void run(){
-                Match m = MySQL.getMatch(id);
-                ArrayList<String> stats = MySQL.getTeamMatchStatistics(m.getHome(),m.getRound());
 
-                //TEAM 1
-                TextView t1 = view.findViewById(R.id.tripontaNumTeam1);
-                TextView t2 = view.findViewById(R.id.dipontaNumTeam1);
-                TextView t3 = view.findViewById(R.id.eleutheraNumTeam1);
-                if (stats.get(0)==null)
-                {
-                    t1.setText("");
-                    t2.setText("");
-                    t3.setText("");
-                }else
-                {
-                    t1.setText(stats.get(0)+"/"+stats.get(1));
-                    t2.setText(stats.get(2)+"/"+stats.get(3));
-                    t3.setText(stats.get(4)+"/"+stats.get(5));
-                }
+        Match m = MySQL.getMatch(id);
+        ArrayList<String> stats = MySQL.getTeamMatchStatistics(m.getHome(),m.getRound());
 
-                TextView t4 = view.findViewById(R.id.reboundsNumTeam1);
-                t4.setText(stats.get(6));
+        //TEAM 1
+        TextView t1 = view.findViewById(R.id.tripontaNumTeam1);
+        TextView t2 = view.findViewById(R.id.dipontaNumTeam1);
+        TextView t3 = view.findViewById(R.id.eleutheraNumTeam1);
+        if (stats.get(0)==null)
+        {
+            t1.setText("");
+            t2.setText("");
+            t3.setText("");
+        }else
+        {
+            t1.setText(stats.get(0)+"/"+stats.get(1));
+            t2.setText(stats.get(2)+"/"+stats.get(3));
+            t3.setText(stats.get(4)+"/"+stats.get(5));
+        }
 
-                TextView t5 = view.findViewById(R.id.assistsNumTeam1);
-                t5.setText(stats.get(7));
+        TextView t4 = view.findViewById(R.id.reboundsNumTeam1);
+        t4.setText(stats.get(6));
 
-                TextView t6= view.findViewById(R.id.kopsimataNumTeam1);
-                t6.setText(stats.get(8));
+        TextView t5 = view.findViewById(R.id.assistsNumTeam1);
+        t5.setText(stats.get(7));
 
-                TextView t7= view.findViewById(R.id.klepsimataNumTeam1);
-                t7.setText(stats.get(9));
+        TextView t6= view.findViewById(R.id.kopsimataNumTeam1);
+        t6.setText(stats.get(8));
 
-                TextView t8= view.findViewById(R.id.lathoiNumTeam1);
-                t8.setText(stats.get(10));
+        TextView t7= view.findViewById(R.id.klepsimataNumTeam1);
+        t7.setText(stats.get(9));
 
-                TextView t9= view.findViewById(R.id.faoulNumTeam1);
-                t9.setText(stats.get(11));
+        TextView t8= view.findViewById(R.id.lathoiNumTeam1);
+        t8.setText(stats.get(10));
 
-                //TEAM 2
-                stats = MySQL.getTeamMatchStatistics(m.getAway(),m.getRound());
+        TextView t9= view.findViewById(R.id.faoulNumTeam1);
+        t9.setText(stats.get(11));
 
-                t1 = view.findViewById(R.id.tripontaNumTeam2);
-                t2 = view.findViewById(R.id.dipontaNumTeam2);
-                t3 = view.findViewById(R.id.eleutheraNumTeam2);
-                if (stats.get(0)==null)
-                {
-                    t1.setText("");
-                    t2.setText("");
-                    t3.setText("");
-                }else
-                {
-                    t1.setText(stats.get(0)+"/"+stats.get(1));
-                    t2.setText(stats.get(2)+"/"+stats.get(3));
-                    t3.setText(stats.get(4)+"/"+stats.get(5));
-                }
+        //TEAM 2
+        stats = MySQL.getTeamMatchStatistics(m.getAway(),m.getRound());
 
-                t4 = view.findViewById(R.id.reboundsNumTeam2);
-                t4.setText(stats.get(6));
+        t1 = view.findViewById(R.id.tripontaNumTeam2);
+        t2 = view.findViewById(R.id.dipontaNumTeam2);
+        t3 = view.findViewById(R.id.eleutheraNumTeam2);
+        if (stats.get(0)==null)
+        {
+            t1.setText("");
+            t2.setText("");
+            t3.setText("");
+        }else
+        {
+            t1.setText(stats.get(0)+"/"+stats.get(1));
+            t2.setText(stats.get(2)+"/"+stats.get(3));
+            t3.setText(stats.get(4)+"/"+stats.get(5));
+        }
 
-                t5 = view.findViewById(R.id.assistsNumTeam2);
-                t5.setText(stats.get(7));
+        t4 = view.findViewById(R.id.reboundsNumTeam2);
+        t4.setText(stats.get(6));
 
-                t6= view.findViewById(R.id.kopsimataNumTeam2);
-                t6.setText(stats.get(8));
+        t5 = view.findViewById(R.id.assistsNumTeam2);
+        t5.setText(stats.get(7));
 
-                t7= view.findViewById(R.id.klepsimataNumTeam2);
-                t7.setText(stats.get(9));
+        t6= view.findViewById(R.id.kopsimataNumTeam2);
+        t6.setText(stats.get(8));
 
-                t8= view.findViewById(R.id.lathoiNumTeam2);
-                t8.setText(stats.get(10));
+        t7= view.findViewById(R.id.klepsimataNumTeam2);
+        t7.setText(stats.get(9));
 
-                t9= view.findViewById(R.id.faoulNumTeam2);
-                t9.setText(stats.get(11));
-            }
-        }.start();
+        t8= view.findViewById(R.id.lathoiNumTeam2);
+        t8.setText(stats.get(10));
+
+        t9= view.findViewById(R.id.faoulNumTeam2);
+        t9.setText(stats.get(11));
     }
 }

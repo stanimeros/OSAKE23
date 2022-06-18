@@ -24,7 +24,7 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
 
     int id;
     String team;
-    String FinalTimestamp;
+    String timestamp;
     Spinner spinner;
     Spinner spinner2;
     Spinner spinner3;
@@ -41,7 +41,7 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
         Bundle bundle = getIntent().getExtras();
         id = bundle.getInt("id");
         team = bundle.getString("team");
-        FinalTimestamp = bundle.getString("timestamp");
+        timestamp = bundle.getString("timestamp");
 
         m = MySQL.getMatch(id);
 
@@ -58,11 +58,14 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
         TextView periodboard = findViewById(R.id.periodboard);
         periodboard.setText(MySQL.getMatchColumn(m.getId(),"period")+"η Περίοδος");
 
-        int timestamp = MySQL.getMatchColumn(m.getId(),"timestamp");
-        timestamp = getCurrentSeconds() - timestamp;
-        timestamp = MySQL.START_TIME - timestamp*1000;
-        if (timestamp<0) {updateText(0);}
-        else {updateText(timestamp);}
+        if (timestamp.equals("00:00")) {
+            if (MySQL.getMatchColumn(m.getId(), "timestamp") != 0) {
+                timestamp = "09:59";
+            }
+        }
+
+        TextView timeboard = findViewById(R.id.timeboard);
+        timeboard.setText(timestamp);
 
         new LogoDownload((ImageView) findViewById(R.id.team1logo))
                 .execute(MySQL.getTeamLogo(m.getHome()));
@@ -103,20 +106,21 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
                     String action = spinner2.getSelectedItem().toString();
                     if (action.contains("Ελεύθερη βολή"))
                     {
-                        m.setTimestamp(FinalTimestamp);
+                        m.setTimestamp(timestamp);
                         m.addAction("free_shots_m",name,team);
                         addRebound(name2);
                     }else if(action.contains("Δίποντο"))
                     {
-                        m.setTimestamp(FinalTimestamp);
+                        m.setTimestamp(timestamp);
                         m.addAction("two_points_m",name,team);
                         addRebound(name2);
                     }else
                     {
-                        m.setTimestamp(FinalTimestamp);
+                        m.setTimestamp(timestamp);
                         m.addAction("three_points_m",name,team);
                         addRebound(name2);
                     }
+                    displayToast();
                     gotoadmin();
                 }catch (Exception e)
                 {
@@ -129,16 +133,16 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
     private void addRebound(String name){
         if (players.contains(name))
         {
-            m.setTimestamp(FinalTimestamp);
+            m.setTimestamp(timestamp);
             m.addAction("rebounds",name,team);
         }else
         {
             if (Objects.equals(team, m.getHome())){
-                m.setTimestamp(FinalTimestamp);
+                m.setTimestamp(timestamp);
                 m.addAction("rebounds",name,m.getAway());
             }else
             {
-                m.setTimestamp(FinalTimestamp);
+                m.setTimestamp(timestamp);
                 m.addAction("rebounds",name,m.getHome());
             }
         }
@@ -162,7 +166,6 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
             temp.addAll(MySQL.getPlayerNames(m.getHome()));
         }
 
-
         spinner3 = findViewById(R.id.rebοunderSpinner);
         ArrayAdapter<CharSequence> adapter3 = new ArrayAdapter(this,R.layout.my_spinner_style, temp);
         adapter3.setDropDownViewResource(R.layout.my_spinner_dropdown_style);
@@ -182,27 +185,5 @@ public class shot_miss extends AppCompatActivity implements AdapterView.OnItemSe
         bundle.putInt("id",id);
         intent.putExtras(bundle);
         startActivity(intent);
-        displayToast();
-    }
-
-    private void updateText(int secs){
-        int minutes = (int) (secs/1000)/60;
-        int seconds = (int) (secs/1000) % 60;
-
-        String timeFormatted = String.format(Locale.getDefault(),"%02d:%02d",(9-minutes),(59-seconds));
-        TextView timeboard = findViewById(R.id.timeboard);
-        timeboard.setText(timeFormatted);
-    }
-
-    private int getCurrentSeconds(){
-        Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HHmmss");
-
-        int time = Integer.valueOf(simpleDateFormat.format(date));
-
-        int seconds = (int) (time/10000)*60*60;
-        seconds+= (int) (time % 10000 / 100)*60;
-        seconds+= (int) (time % 100);
-        return seconds;
     }
 }

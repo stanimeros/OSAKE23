@@ -62,7 +62,11 @@ public class gamecard extends Fragment {
             p6.setText(players.get(5));
             p7.setText(players.get(6));
             p8.setText(players.get(7));
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
+        try {
             players.clear();
             players = MySQL.getPlayerNames(m.getAway());
 

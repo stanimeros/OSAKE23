@@ -67,6 +67,9 @@ public class second_team extends Fragment {
         View playersView = getLayoutInflater().inflate(R.layout.players_view, null, false);
         Player p = MySQL.getPlayer(players.get(i),m.getAway());
 
+        TextView p0 = playersView.findViewById(R.id.number1);
+        p0.setText((int)Math.floor(Math.random()*(99-1+1)+1)+"");
+
         TextView p1 = playersView.findViewById(R.id.player1);
         p1.setText(p.getName());
 

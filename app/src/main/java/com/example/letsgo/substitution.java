@@ -35,6 +35,7 @@ public class substitution extends AppCompatActivity implements AdapterView.OnIte
         Bundle bundle = getIntent().getExtras();
         id = bundle.getInt("id");
         team = bundle.getString("team");
+        String timestamp = bundle.getString("timestamp");
 
         m = MySQL.getMatch(id);
         players = MySQL.getPlayerNames(team);
@@ -52,11 +53,14 @@ public class substitution extends AppCompatActivity implements AdapterView.OnIte
         TextView periodboard = findViewById(R.id.periodboard);
         periodboard.setText(MySQL.getMatchColumn(m.getId(),"period")+"η Περίοδος");
 
-        int timestamp = MySQL.getMatchColumn(m.getId(),"timestamp");
-        timestamp = getCurrentSeconds() - timestamp;
-        timestamp = MySQL.START_TIME - timestamp*1000;
-        if (timestamp<0) {updateText(0);}
-        else {updateText(timestamp);}
+        if (timestamp.equals("00:00")) {
+            if (MySQL.getMatchColumn(m.getId(), "timestamp") != 0) {
+                timestamp = "09:59";
+            }
+        }
+
+        TextView timeboard = findViewById(R.id.timeboard);
+        timeboard.setText(timestamp);
 
         new LogoDownload((ImageView) findViewById(R.id.team1logo))
                 .execute(MySQL.getTeamLogo(m.getHome()));
@@ -86,6 +90,7 @@ public class substitution extends AppCompatActivity implements AdapterView.OnIte
                     MySQL.UpdatePlayer(p2,p1.getId());
                     MySQL.UpdatePlayer(p1,p2.getId());
 
+                    displayToast();
                     gotoadmin();
                 }catch (Exception e){
                     System.out.println(e);
@@ -132,27 +137,5 @@ public class substitution extends AppCompatActivity implements AdapterView.OnIte
         bundle.putInt("id",id);
         intent.putExtras(bundle);
         startActivity(intent);
-        displayToast();
-    }
-
-    private void updateText(int secs){
-        int minutes = (int) (secs/1000)/60;
-        int seconds = (int) (secs/1000) % 60;
-
-        String timeFormatted = String.format(Locale.getDefault(),"%02d:%02d",(9-minutes),(59-seconds));
-        TextView timeboard = findViewById(R.id.timeboard);
-        timeboard.setText(timeFormatted);
-    }
-
-    private int getCurrentSeconds(){
-        Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HHmmss");
-
-        int time = Integer.valueOf(simpleDateFormat.format(date));
-
-        int seconds = (int) (time/10000)*60*60;
-        seconds+= (int) (time % 10000 / 100)*60;
-        seconds+= (int) (time % 100);
-        return seconds;
     }
 }

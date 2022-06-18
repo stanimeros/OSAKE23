@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.material.imageview.ShapeableImageView;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class action extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -20,8 +21,6 @@ public class action extends AppCompatActivity implements AdapterView.OnItemSelec
     String action;
     String timestamp;
     Spinner spinner;
-    //COMMIT TEST
-    int test;
 
     ArrayList<String> players = new ArrayList<>();
     Match m;
@@ -43,7 +42,13 @@ public class action extends AppCompatActivity implements AdapterView.OnItemSelec
         m = MySQL.getMatch(id);
         players = MySQL.getPlayerNames(team);
 
-        ImageView back = findViewById(R.id.back);
+        if (timestamp.equals("00:00")) {
+            if (MySQL.getMatchColumn(m.getId(), "timestamp") != 0) {
+                timestamp = "09:59";
+            }
+        }
+
+            ImageView back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +63,7 @@ public class action extends AppCompatActivity implements AdapterView.OnItemSelec
                 try {
                     m.setTimestamp(timestamp);
                     m.addAction(action,spinner.getSelectedItem().toString(),team);
+                    displayToast();
                     gotoadmin();
                 }catch (Exception e){
                     System.out.println(e);
@@ -87,6 +93,5 @@ public class action extends AppCompatActivity implements AdapterView.OnItemSelec
         bundle.putInt("id",id);
         intent.putExtras(bundle);
         startActivity(intent);
-        displayToast();
     }
 }

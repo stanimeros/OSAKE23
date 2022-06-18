@@ -22,7 +22,7 @@ public class shot_score extends AppCompatActivity implements AdapterView.OnItemS
 
     int id;
     String team;
-    String FinalTimestamp;
+    String timestamp;
     Spinner spinner;
     Spinner spinner2;
     Spinner spinner3;
@@ -39,7 +39,7 @@ public class shot_score extends AppCompatActivity implements AdapterView.OnItemS
         Bundle bundle = getIntent().getExtras();
         id = bundle.getInt("id");
         team = bundle.getString("team");
-        FinalTimestamp = bundle.getString("timestamp");
+        timestamp = bundle.getString("timestamp");
 
         m = MySQL.getMatch(id);
         players = MySQL.getPlayerNames(team);
@@ -57,11 +57,14 @@ public class shot_score extends AppCompatActivity implements AdapterView.OnItemS
         TextView periodboard = findViewById(R.id.periodboard);
         periodboard.setText(MySQL.getMatchColumn(m.getId(),"period")+"η Περίοδος");
 
-        int timestamp = MySQL.getMatchColumn(m.getId(),"timestamp");
-        timestamp = getCurrentSeconds() - timestamp;
-        timestamp = MySQL.START_TIME - timestamp*1000;
-        if (timestamp<0) {updateText(0);}
-        else {updateText(timestamp);}
+        if (timestamp.equals("00:00")) {
+            if (MySQL.getMatchColumn(m.getId(), "timestamp") != 0) {
+                timestamp = "09:59";
+            }
+        }
+
+        TextView timeboard = findViewById(R.id.timeboard);
+        timeboard.setText(timestamp);
 
         new LogoDownload((ImageView) findViewById(R.id.team1logo))
                 .execute(MySQL.getTeamLogo(m.getHome()));
@@ -123,22 +126,23 @@ public class shot_score extends AppCompatActivity implements AdapterView.OnItemS
 
                     if (action.contains("Ελεύθερη βολή"))
                     {
-                        m.setTimestamp(FinalTimestamp);
+                        m.setTimestamp(timestamp);
                         m.addAction("free_shots",name,team);
                         m.insertPoint(1, Objects.equals(team, m.getHome()));
                     }else if(action.contains("Δίποντο"))
                     {
-                        m.setTimestamp(FinalTimestamp);
+                        m.setTimestamp(timestamp);
                         m.addAction("two_points",name,team);
                         m.addAction("assists",name2,team);
                         m.insertPoint(2,Objects.equals(team, m.getHome()));
                     }else
                     {
-                        m.setTimestamp(FinalTimestamp);
+                        m.setTimestamp(timestamp);
                         m.addAction("three_points",name,team);
                         m.addAction("assists",name2,team);
                         m.insertPoint(3,Objects.equals(team, m.getHome()));
                     }
+                    displayToast();
                     gotoadmin();
                 }catch (Exception e){
                     System.out.println(e);
@@ -176,27 +180,5 @@ public class shot_score extends AppCompatActivity implements AdapterView.OnItemS
         bundle.putInt("id",id);
         intent.putExtras(bundle);
         startActivity(intent);
-        displayToast();
-    }
-
-    private void updateText(int secs){
-        int minutes = (int) (secs/1000)/60;
-        int seconds = (int) (secs/1000) % 60;
-
-        String timeFormatted = String.format(Locale.getDefault(),"%02d:%02d",(9-minutes),(59-seconds));
-        TextView timeboard = findViewById(R.id.timeboard);
-        timeboard.setText(timeFormatted);
-    }
-
-    private int getCurrentSeconds(){
-        Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HHmmss");
-
-        int time = Integer.valueOf(simpleDateFormat.format(date));
-
-        int seconds = (int) (time/10000)*60*60;
-        seconds+= (int) (time % 10000 / 100)*60;
-        seconds+= (int) (time % 100);
-        return seconds;
     }
 }
