@@ -52,6 +52,8 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
         try {
             ArrayList<String> teams = MySQL.getTeams();
 
+
+
             Spinner spinner2 = findViewById(R.id.teamSpinner);
             ArrayAdapter adapter2 = new ArrayAdapter(this,R.layout.my_spinner_style,teams);
             adapter2.setDropDownViewResource(R.layout.my_spinner_dropdown_style);
@@ -59,15 +61,20 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
             spinner2.setOnItemSelectedListener(this);
 
             Button incert = findViewById(R.id.incert);
+            if (teams.size()==0){
+                incert.setClickable(false);
+            }
+
             incert.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    gotoMenuAdmin();
                     String name = nameView.getText().toString();
                     String path = pathView.getText().toString();
 
                     Player p = new Player(MySQL.getTeamId(spinner2.getSelectedItem().toString()),name,spinner.getSelectedItem().toString(),path);
                     p.createSQL();
+                    displayToast();
+                    gotoMenuAdmin();
                 }
             });
         }catch (Exception e){
@@ -78,7 +85,6 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
     private void gotoMenuAdmin(){
         Intent intent = new Intent(this, menu_admin.class);
         startActivity(intent);
-        displayToast();
     }
 
     public void displayToast(){

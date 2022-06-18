@@ -52,9 +52,11 @@ public class create_a_team extends AppCompatActivity {
         incert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoMenuAdmin();
-
                 String name = nameView.getText().toString();
+                if (name.equals("Ονομα Ομάδας"))
+                {
+                    return;
+                }
 
                 String city = cityView.getText().toString();
 
@@ -62,6 +64,9 @@ public class create_a_team extends AppCompatActivity {
 
                 Team t = new Team(name,city,path);
                 t.createSQL();
+
+                displayToast();
+                gotoMenuAdmin();
             }
         });
     }
@@ -73,6 +78,5 @@ public class create_a_team extends AppCompatActivity {
     private void gotoMenuAdmin(){
         Intent intent = new Intent(this, menu_admin.class);
         startActivity(intent);
-        displayToast();
     }
 }

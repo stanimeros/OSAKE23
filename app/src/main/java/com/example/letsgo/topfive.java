@@ -26,6 +26,14 @@ public class topfive extends AppCompatActivity {
         try{
             ArrayList<String> topPlayersInfo = MySQL.getTopPlayers();
 
+
+            //XEN
+            //ArrayList<String> topPlayersInfo = MySQL.getTopPlayers();
+            //topPlayersInfo.add(name);
+
+
+
+
             //1
             TextView t1 = findViewById(R.id.player1);
             TextView t2 = findViewById(R.id.pos1);

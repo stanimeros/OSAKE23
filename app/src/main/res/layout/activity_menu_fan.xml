@@ -67,7 +67,7 @@
                 android:layout_height="71dp"
                 android:layout_marginTop="25dp"
                 android:background="@color/teal_700"
-                android:text="Αγώνες Ημέρας"
+                android:text="ΑΓΩΝΕΣ ΗΜΕΡΑΣ"
                 android:textColor="@color/white"
                 android:textSize="25dp"
                 app:layout_constraintEnd_toEndOf="parent"

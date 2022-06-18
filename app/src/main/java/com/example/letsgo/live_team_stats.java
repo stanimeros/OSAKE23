@@ -65,9 +65,9 @@ public class live_team_stats extends Fragment {
             t3.setText("");
         }else
         {
-            t1.setText(stats.get(0)+"/"+stats.get(1));
-            t2.setText(stats.get(2)+"/"+stats.get(3));
-            t3.setText(stats.get(4)+"/"+stats.get(5));
+            t1.setText(stats.get(0)+"/"+(Integer.valueOf(stats.get(0))+(Integer.valueOf(stats.get(1)))));
+            t2.setText(stats.get(2)+"/"+(Integer.valueOf(stats.get(2))+(Integer.valueOf(stats.get(3)))));
+            t3.setText(stats.get(4)+"/"+(Integer.valueOf(stats.get(4))+(Integer.valueOf(stats.get(5)))));
         }
 
         TextView t4 = view.findViewById(R.id.reboundsNumTeam1);
@@ -101,9 +101,9 @@ public class live_team_stats extends Fragment {
             t3.setText("");
         }else
         {
-            t1.setText(stats.get(0)+"/"+stats.get(1));
-            t2.setText(stats.get(2)+"/"+stats.get(3));
-            t3.setText(stats.get(4)+"/"+stats.get(5));
+            t1.setText(stats.get(0)+"/"+(Integer.valueOf(stats.get(0))+(Integer.valueOf(stats.get(1)))));
+            t2.setText(stats.get(2)+"/"+(Integer.valueOf(stats.get(2))+(Integer.valueOf(stats.get(3)))));
+            t3.setText(stats.get(4)+"/"+(Integer.valueOf(stats.get(4))+(Integer.valueOf(stats.get(5)))));
         }
 
         t4 = view.findViewById(R.id.reboundsNumTeam2);
