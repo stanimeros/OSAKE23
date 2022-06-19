@@ -13,42 +13,44 @@ public class Championship {
         mySQLConnection.Select("SELECT name FROM teams");
         MySQL.ThreadStart(mySQLConnection);
         teams = mySQLConnection.getResults();
-
-        mySQLConnection.Insert("TRUNCATE TABLE scoreboard");
-        MySQL.ThreadStart(mySQLConnection);
-
-        for (int i=0;i<teams.size();i++)
+        if (teams.size()>=2 && teams.size()%2==0)
         {
-            mySQLConnection.Insert("INSERT INTO scoreboard (name) VALUES ('"+teams.get(i)+"')");
+            mySQLConnection.Insert("TRUNCATE TABLE scoreboard");
             MySQL.ThreadStart(mySQLConnection);
-        }
 
-        this.teams = teams;
-        Collections.shuffle(teams);
-
-        mySQLConnection.Insert("TRUNCATE TABLE matches");
-        MySQL.ThreadStart(mySQLConnection);
-
-        mySQLConnection.Insert("TRUNCATE TABLE settings");
-        MySQL.ThreadStart(mySQLConnection);
-
-        mySQLConnection.Insert("TRUNCATE TABLE statistics");
-        MySQL.ThreadStart(mySQLConnection);
-
-        mySQLConnection.Insert("TRUNCATE TABLE flow");
-        MySQL.ThreadStart(mySQLConnection);
-
-        MySQL.setCurrentRound(1);
-
-        ArrayList<String> temp = new ArrayList<>();
-
-        temp.addAll(teams);
-        int size = temp.size()-1;
-        for (int i=0;i<size;i++){
-            for (int j=0;j<temp.size()-1;j++){
-                createRound(temp.get(0), temp.get(j+1));
+            for (int i=0;i<teams.size();i++)
+            {
+                mySQLConnection.Insert("INSERT INTO scoreboard (name) VALUES ('"+teams.get(i)+"')");
+                MySQL.ThreadStart(mySQLConnection);
             }
-            temp.remove(0);
+
+            this.teams = teams;
+            Collections.shuffle(teams);
+
+            mySQLConnection.Insert("TRUNCATE TABLE matches");
+            MySQL.ThreadStart(mySQLConnection);
+
+            mySQLConnection.Insert("TRUNCATE TABLE settings");
+            MySQL.ThreadStart(mySQLConnection);
+
+            mySQLConnection.Insert("TRUNCATE TABLE statistics");
+            MySQL.ThreadStart(mySQLConnection);
+
+            mySQLConnection.Insert("TRUNCATE TABLE flow");
+            MySQL.ThreadStart(mySQLConnection);
+
+            MySQL.setCurrentRound(1);
+
+            ArrayList<String> temp = new ArrayList<>();
+
+            temp.addAll(teams);
+            int size = temp.size()-1;
+            for (int i=0;i<size;i++){
+                for (int j=0;j<temp.size()-1;j++){
+                    createRound(temp.get(0), temp.get(j+1));
+                }
+                temp.remove(0);
+            }
         }
     }
 

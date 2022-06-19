@@ -30,12 +30,12 @@
             android:layout_height="wrap_content"
             android:ems="15"
             android:inputType="textPersonName"
+            android:padding="20dp"
             android:shadowColor="@color/white"
-            android:text="Ονομα Παίκτη"
+            android:text="Όνομα Παίκτη"
             android:textColor="@color/white"
             android:textColorHighlight="@color/white"
             android:textColorHint="@color/white"
-            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -122,9 +122,9 @@
             android:id="@+id/incert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp"
             android:background="#BD1616"
-            android:text="Καταχώρηση Παίκτη"
+            android:padding="15dp"
+            android:text="Καταχωρηση Παικτη"
             android:textColor="@color/white"
             android:textSize="20sp" />
 

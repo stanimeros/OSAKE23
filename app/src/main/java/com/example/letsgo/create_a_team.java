@@ -53,7 +53,7 @@ public class create_a_team extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = nameView.getText().toString();
-                if (name.equals("Ονομα Ομάδας"))
+                if (name.equals("Όνομα Ομάδας"))
                 {
                     return;
                 }
