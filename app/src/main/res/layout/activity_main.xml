@@ -51,8 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
+            android:padding="10dp"
             android:background="@color/teal_200"
-            android:text="Login"
+            android:text="Start Now"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/logo_number"
             app:layout_constraintStart_toStartOf="@+id/logo_number"
@@ -67,19 +68,6 @@
             app:layout_constraintEnd_toEndOf="@+id/btnlogin"
             app:layout_constraintStart_toStartOf="@+id/btnlogin"
             app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Forgot your password?"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnloginadmin"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintStart_toStartOf="@+id/btnloginadmin"
-            app:layout_constraintTop_toBottomOf="@+id/btnloginadmin"
-            app:layout_constraintVertical_bias="0.07" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

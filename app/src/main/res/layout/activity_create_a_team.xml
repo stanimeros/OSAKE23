@@ -44,7 +44,7 @@
                     android:ems="15"
                     android:inputType="textPersonName"
                     android:shadowColor="@color/white"
-                    android:text="Ονομα Ομάδας"
+                    android:text="Όνομα Ομάδας"
                     android:textColor="@color/white"
                     android:textColorHighlight="@color/white"
                     android:textColorHint="@color/white"
@@ -126,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:background="#BD1616"
                     android:padding="15dp"
-                    android:text="Καταχώρηση Ομάδας"
+                    android:text="Καταχωρηση Ομαδας"
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
