@@ -102,6 +102,5 @@ public class club_personal_stats extends Fragment {
         {
             System.out.println(e);
         }
-
     }
 }

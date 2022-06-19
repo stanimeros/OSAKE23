@@ -1,7 +1,6 @@
 package com.example.letsgo;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class clubs extends AppCompatActivity {
@@ -44,7 +42,6 @@ public class clubs extends AppCompatActivity {
         }catch (Exception e){
             System.out.println(e);
         }
-
     }
 
     private void addView(String n) {

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class MySQL {
 
-    public static final int START_TIME = 5000;
-    public static final String IP = "192.168.1.4";
+    public static final int START_TIME = 2000;
+    public static final String IP = "192.168.2.99";
 
     public static MySQLConnection ThreadStart (MySQLConnection mySQL)
     {
@@ -73,14 +73,6 @@ public class MySQL {
     {
         MySQLConnection mySQLConnection = new MySQLConnection();
         mySQLConnection.Select("SELECT players.name FROM players INNER JOIN teams on players.team_id = teams.id WHERE teams.name = '"+team+"'");
-        MySQL.ThreadStart(mySQLConnection);
-        return mySQLConnection.getResults();
-    }
-
-    public static ArrayList<String> getPlayers(String team,String option)
-    {
-        MySQLConnection mySQLConnection = new MySQLConnection();
-        mySQLConnection.Select("SELECT players."+option+" FROM players INNER JOIN teams on players.team_id = teams.id WHERE teams.name = '"+team+"'");
         MySQL.ThreadStart(mySQLConnection);
         return mySQLConnection.getResults();
     }

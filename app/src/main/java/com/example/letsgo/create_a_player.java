@@ -52,8 +52,6 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
         try {
             ArrayList<String> teams = MySQL.getTeams();
 
-
-
             Spinner spinner2 = findViewById(R.id.teamSpinner);
             ArrayAdapter adapter2 = new ArrayAdapter(this,R.layout.my_spinner_style,teams);
             adapter2.setDropDownViewResource(R.layout.my_spinner_dropdown_style);

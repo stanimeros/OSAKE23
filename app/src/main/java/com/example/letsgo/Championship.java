@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Championship {
-    private ArrayList<String> teams = new ArrayList<>();
-    private MySQLConnection mySQLConnection = new MySQLConnection();
+     private ArrayList<String> teams = new ArrayList<>();
+     private MySQLConnection mySQLConnection = new MySQLConnection();
 
     public Championship(){
 
-        ArrayList<String> teams = new ArrayList<>();
+        ArrayList<String> teams;
         mySQLConnection.Select("SELECT name FROM teams");
         MySQL.ThreadStart(mySQLConnection);
         teams = mySQLConnection.getResults();

@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import com.google.android.material.imageview.ShapeableImageView;
 
-public class game_management extends Fragment implements AdapterView.OnItemSelectedListener {
+public class game_management extends Fragment {
 
     int id;
 
@@ -214,14 +214,5 @@ public class game_management extends Fragment implements AdapterView.OnItemSelec
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String text = parent.getItemAtPosition(position).toString();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
     }
 }

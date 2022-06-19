@@ -26,12 +26,9 @@ public class topfive extends AppCompatActivity {
         try{
             ArrayList<String> topPlayersInfo = MySQL.getTopPlayers();
 
-
             //XEN
             //ArrayList<String> topPlayersInfo = MySQL.getTopPlayers();
             //topPlayersInfo.add(name);
-
-
 
 
             //1
