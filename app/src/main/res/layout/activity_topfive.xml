@@ -124,504 +124,519 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutNames" />
 
-    <RelativeLayout
-        android:id="@+id/layoutPlayer1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/line1">
 
-        <TextView
-            android:id="@+id/number1"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/player1"
-            android:layout_width="161dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/team1"
-            android:layout_toEndOf="@+id/number1"
-            android:gravity="center_vertical"
-            android:text="player1"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/layoutPlayer1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/team1"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/losses"
-            android:gravity="center"
-            android:text="Team1"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/number1"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/losses"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/rounds"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/player1"
+                    android:layout_width="161dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/team1"
+                    android:layout_toEndOf="@+id/number1"
+                    android:gravity="center_vertical"
+                    android:text="player1"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/rounds"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/points1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team1"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/losses"
+                    android:gravity="center"
+                    android:text="Team1"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/points1"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/losses"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rounds"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/pos1"
-            style="@style/positions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/player1"
-            android:layout_toEndOf="@+id/number1"
-            android:text="position" />
+                <TextView
+                    android:id="@+id/rounds"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/points1"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/points1"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    <View
-        android:id="@+id/line2"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_orange_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPlayer1" />
+                <TextView
+                    android:id="@+id/pos1"
+                    style="@style/positions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/player1"
+                    android:layout_toEndOf="@+id/number1"
+                    android:text="position" />
 
-    <RelativeLayout
-        android:id="@+id/layoutPlayer2"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line2">
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/number2"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="1"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPlayer1" />
 
-        <TextView
-            android:id="@+id/player2"
-            android:layout_width="161dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/team2"
-            android:layout_toEndOf="@+id/number2"
-            android:gravity="center_vertical"
-            android:text="player2"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/layoutPlayer2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line2">
 
-        <TextView
-            android:id="@+id/team2"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/rebaunts2"
-            android:gravity="center"
-            android:text="Team2"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/number2"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/rebaunts2"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/assists2"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/player2"
+                    android:layout_width="161dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/team2"
+                    android:layout_toEndOf="@+id/number2"
+                    android:gravity="center_vertical"
+                    android:text="player2"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/assists2"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/Points2"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team2"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rebaunts2"
+                    android:gravity="center"
+                    android:text="Team2"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Points2"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/rebaunts2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/assists2"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/position2"
-            style="@style/positions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/player2"
-            android:layout_toEndOf="@+id/number2"
-            android:text="position" />
+                <TextView
+                    android:id="@+id/assists2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/Points2"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/Points2"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    <View
-        android:id="@+id/line3"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_orange_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPlayer2" />
+                <TextView
+                    android:id="@+id/position2"
+                    style="@style/positions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/player2"
+                    android:layout_toEndOf="@+id/number2"
+                    android:text="position" />
 
-    <RelativeLayout
-        android:id="@+id/layoutPlayer3"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line3">
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/number3"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="2"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            <View
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPlayer2" />
 
-        <TextView
-            android:id="@+id/player3"
-            android:layout_width="161dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/team3"
-            android:layout_toEndOf="@+id/number3"
-            android:gravity="center_vertical"
-            android:text="player3"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/layoutPlayer3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line3">
 
-        <TextView
-            android:id="@+id/team3"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/rebaunts3"
-            android:gravity="center"
-            android:text="Team3"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/number3"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/rebaunts3"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/assists3"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/player3"
+                    android:layout_width="161dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/team3"
+                    android:layout_toEndOf="@+id/number3"
+                    android:gravity="center_vertical"
+                    android:text="player3"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/assists3"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/Points3"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team3"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rebaunts3"
+                    android:gravity="center"
+                    android:text="Team3"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Points3"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/rebaunts3"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/assists3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/position3"
-            style="@style/positions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/player3"
-            android:layout_toEndOf="@+id/number3"
-            android:text="position" />
+                <TextView
+                    android:id="@+id/assists3"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/Points3"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/Points3"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    <View
-        android:id="@+id/line4"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_orange_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPlayer3" />
+                <TextView
+                    android:id="@+id/position3"
+                    style="@style/positions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/player3"
+                    android:layout_toEndOf="@+id/number3"
+                    android:text="position" />
 
-    <RelativeLayout
-        android:id="@+id/layoutPlayer4"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line4">
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/number4"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="3"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPlayer3" />
 
-        <TextView
-            android:id="@+id/player4"
-            android:layout_width="161dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/team4"
-            android:layout_toEndOf="@+id/number4"
-            android:gravity="center_vertical"
-            android:text="player4"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/layoutPlayer4"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line4">
 
-        <TextView
-            android:id="@+id/team4"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/rebaunts4"
-            android:gravity="center"
-            android:text="Team4"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/number4"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/rebaunts4"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/assists4"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/player4"
+                    android:layout_width="161dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/team4"
+                    android:layout_toEndOf="@+id/number4"
+                    android:gravity="center_vertical"
+                    android:text="player4"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/assists4"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/Points4"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team4"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rebaunts4"
+                    android:gravity="center"
+                    android:text="Team4"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Points4"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/rebaunts4"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/assists4"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/position4"
-            style="@style/positions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/player4"
-            android:layout_toEndOf="@+id/number4"
-            android:text="position" />
+                <TextView
+                    android:id="@+id/assists4"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/Points4"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/Points4"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    <View
-        android:id="@+id/line5"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_orange_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPlayer4" />
+                <TextView
+                    android:id="@+id/position4"
+                    style="@style/positions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/player4"
+                    android:layout_toEndOf="@+id/number4"
+                    android:text="position" />
 
-    <RelativeLayout
-        android:id="@+id/layoutPlayer5"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line5">
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/number5"
-            android:layout_width="30dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="4"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+            <View
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPlayer4" />
 
-        <TextView
-            android:id="@+id/player5"
-            android:layout_width="161dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/team5"
-            android:layout_toEndOf="@+id/number5"
-            android:gravity="center_vertical"
-            android:text="player5"
-            android:textColor="@color/white"
-            android:textSize="13sp"
-            android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/layoutPlayer5"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line5">
 
-        <TextView
-            android:id="@+id/team5"
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/rebaunts5"
-            android:gravity="center"
-            android:text="Team5"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/number5"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/rebaunts5"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/assists5"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/player5"
+                    android:layout_width="161dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/team5"
+                    android:layout_toEndOf="@+id/number5"
+                    android:gravity="center_vertical"
+                    android:text="player5"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/assists5"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@+id/Points5"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/team5"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/rebaunts5"
+                    android:gravity="center"
+                    android:text="Team5"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/Points5"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/rebaunts5"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/assists5"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/position5"
-            style="@style/positions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/player5"
-            android:layout_toEndOf="@+id/number5"
-            android:text="position" />
+                <TextView
+                    android:id="@+id/assists5"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/Points5"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/Points5"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
 
-    <View
-        android:id="@+id/line6"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_orange_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutPlayer5" />
+                <TextView
+                    android:id="@+id/position5"
+                    style="@style/positions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/player5"
+                    android:layout_toEndOf="@+id/number5"
+                    android:text="position" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/holo_orange_dark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPlayer5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

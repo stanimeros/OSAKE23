@@ -63,6 +63,7 @@
             android:id="@+id/Team1action"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="start"
             android:text="Rebound:"
             android:textColor="@color/white"/>
 
@@ -73,7 +74,7 @@
             android:textSize="12sp"
             android:text="Ioannis Papagiannis"
             android:textColor="@color/white"
-            android:gravity="end" />
+            android:gravity="start" />
 
 
     </LinearLayout>
@@ -93,6 +94,7 @@
             android:id="@+id/Team2action"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="start"
             android:text="Shoot:"
             android:textColor="@color/white"/>
 
@@ -103,7 +105,7 @@
             android:textSize="12sp"
             android:text="Giannoulhs Larentzakhs"
             android:textColor="@color/white"
-            android:gravity="end" />
+            android:gravity="start" />
 
 
     </LinearLayout>
