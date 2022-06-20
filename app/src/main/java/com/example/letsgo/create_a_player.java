@@ -59,9 +59,6 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
             spinner2.setOnItemSelectedListener(this);
 
             Button incert = findViewById(R.id.incert);
-            if (teams.size()==0){
-                incert.setClickable(false);
-            }
 
             incert.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -69,8 +66,9 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
                     String name = nameView.getText().toString();
                     String path = pathView.getText().toString();
 
-                    if (name==null)
+                    if (name.isEmpty()||spinner2.getSelectedItem()==null)
                     {
+                        Toast.makeText(create_a_player.this,"Failed!", Toast.LENGTH_SHORT).show();
                         return;
                     }
 

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MySQL {
 
-    public static final int START_TIME = 60000;
+    public static final int START_TIME = 40000;
     public static final String IP = "192.168.2.99";
 
     public static MySQLConnection ThreadStart (MySQLConnection mySQL)
@@ -147,7 +147,7 @@ public class MySQL {
     {
         MySQLConnection mySQLConnection = new MySQLConnection();
         mySQLConnection.Select("SELECT players.name,players.position,team,rebounds,assists,three_points " +
-                "FROM statistics INNER JOIN players on players.name = statistics.name WHERE round="+getCurrentRound()+
+                "FROM statistics INNER JOIN players on players.name = statistics.name WHERE round="+Integer.valueOf(getCurrentRound()-1)+
                 " ORDER BY "+target+" DESC");
         MySQL.ThreadStart(mySQLConnection);
         return mySQLConnection.getResults();
