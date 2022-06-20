@@ -193,22 +193,25 @@ public class admin extends AppCompatActivity {
                     timeboard.setText("00:00");
                     periodboard.setText("Έληξε");
                     MySQLConnection mySQLConnection = new MySQLConnection();
-                    mySQLConnection.Insert("INSERT INTO flow (match_id,action) VALUES ("+id+",'Έληξε')");
-                    MySQL.ThreadStart(mySQLConnection);
-                    MySQL.setMatchColumn(id,"isFinished","1");
-                    if (Integer.valueOf(MySQL.getMatchColumn(id,"homePoints"))
-                            >Integer.valueOf(MySQL.getMatchColumn(id,"awayPoints"))){
-                        Team t1 = MySQL.getTeam(m.getHome());
-                        t1.addMatchResult(true);
+                    if (MySQL.getMatchColumn(m.getId(),"isFinished")==0)
+                    {
+                        mySQLConnection.Insert("INSERT INTO flow (match_id,action) VALUES ("+id+",'Έληξε')");
+                        MySQL.ThreadStart(mySQLConnection);
+                        MySQL.setMatchColumn(id,"isFinished","1");
+                        if (Integer.valueOf(MySQL.getMatchColumn(id,"homePoints"))
+                                >Integer.valueOf(MySQL.getMatchColumn(id,"awayPoints"))){
+                            Team t1 = MySQL.getTeam(m.getHome());
+                            t1.addMatchResult(true);
 
-                        Team t2 = MySQL.getTeam(m.getAway());
-                        t2.addMatchResult(false);
-                    }else{
-                        Team t1 = MySQL.getTeam(m.getHome());
-                        t1.addMatchResult(false);
+                            Team t2 = MySQL.getTeam(m.getAway());
+                            t2.addMatchResult(false);
+                        }else{
+                            Team t1 = MySQL.getTeam(m.getHome());
+                            t1.addMatchResult(false);
 
-                        Team t2 = MySQL.getTeam(m.getAway());
-                        t2.addMatchResult(true);
+                            Team t2 = MySQL.getTeam(m.getAway());
+                            t2.addMatchResult(true);
+                        }
                     }
                 }else
                 {

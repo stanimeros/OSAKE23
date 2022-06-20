@@ -136,9 +136,11 @@ public class ingame extends AppCompatActivity {
         timer = new CountDownTimer(secs, 1000) {
             @Override
             public void onTick(long l) {
-                running = true;
                 secs = l;
-                updateText();
+                if (running)
+                {
+                    updateText();
+                }
             }
 
             @Override
