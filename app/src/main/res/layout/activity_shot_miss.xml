@@ -37,7 +37,7 @@
 
             <LinearLayout
                 android:id="@+id/playerlabel"
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/teal_700"
@@ -50,7 +50,7 @@
                     android:src="@drawable/ic_baseline_sports_basketball_24" />
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:text="Shooter:"
@@ -80,7 +80,7 @@
 
             <LinearLayout
                 android:id="@+id/pointlabel"
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/teal_700"
@@ -93,7 +93,7 @@
                     android:src="@drawable/ic_baseline_123_24" />
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center"
                     android:text="Points:"
@@ -124,7 +124,7 @@
 
             <LinearLayout
                 android:id="@+id/assistslabel"
-                android:layout_width="150dp"
+                android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/teal_700"
@@ -137,7 +137,7 @@
                     android:src="@drawable/ic_baseline_back_hand_24" />
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:gravity="center"
                     android:text="Rebοund by:"

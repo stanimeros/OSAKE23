@@ -78,8 +78,9 @@
 
             <RelativeLayout
                 android:id="@+id/numbers"
-                android:layout_width="30dp"
+                android:layout_width="20dp"
                 android:layout_height="210dp"
+                app:layout_constraintEnd_toStartOf="@+id/players"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/page1line2">
 
@@ -148,7 +149,7 @@
 
             <RelativeLayout
                 android:id="@+id/players"
-                android:layout_width="174dp"
+                android:layout_width="0dp"
                 android:layout_height="210dp"
                 app:layout_constraintEnd_toStartOf="@+id/page1line3"
                 app:layout_constraintStart_toEndOf="@+id/numbers"
@@ -221,7 +222,7 @@
 
             <RelativeLayout
                 android:id="@+id/numbers2"
-                android:layout_width="30dp"
+                android:layout_width="20dp"
                 android:layout_height="210dp"
                 app:layout_constraintEnd_toStartOf="@+id/players2"
                 app:layout_constraintStart_toEndOf="@+id/page1line3"
@@ -292,9 +293,10 @@
 
             <RelativeLayout
                 android:id="@+id/players2"
-                android:layout_width="174dp"
+                android:layout_width="0dp"
                 android:layout_height="210dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/numbers2"
                 app:layout_constraintTop_toBottomOf="@+id/page1line2">
 
                 <TextView
@@ -399,7 +401,7 @@
 
             <RelativeLayout
                 android:id="@+id/numbersSubs"
-                android:layout_width="30dp"
+                android:layout_width="20dp"
                 android:layout_height="130dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/page1line4">
@@ -446,7 +448,7 @@
 
             <RelativeLayout
                 android:id="@+id/playersSub"
-                android:layout_width="174dp"
+                android:layout_width="0dp"
                 android:layout_height="130dp"
                 app:layout_constraintEnd_toStartOf="@+id/page1line3"
                 app:layout_constraintStart_toEndOf="@+id/numbers"
@@ -495,7 +497,7 @@
 
             <RelativeLayout
                 android:id="@+id/Subnumbers2"
-                android:layout_width="30dp"
+                android:layout_width="20dp"
                 android:layout_height="130dp"
                 app:layout_constraintEnd_toStartOf="@+id/players2"
                 app:layout_constraintStart_toEndOf="@+id/page1line3"
@@ -543,9 +545,10 @@
 
             <RelativeLayout
                 android:id="@+id/Subplayers2"
-                android:layout_width="174dp"
+                android:layout_width="0dp"
                 android:layout_height="130dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/Subnumbers2"
                 app:layout_constraintTop_toBottomOf="@+id/page1line4">
 
                 <TextView

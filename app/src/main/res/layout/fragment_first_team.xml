@@ -10,83 +10,93 @@
 
     <!-- TODO: Update blank fragment layout -->
     <View
-        android:id="@+id/line17"
-        android:layout_width="205dp"
-        android:layout_height="5dp"
+        android:id="@+id/page1line"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
         android:background="@android:color/holo_orange_dark"
+        android:gravity="start|top"
+        app:layout_constraintEnd_toStartOf="@+id/page2line"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/page2line"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:gravity="start|top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/page1line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
         android:id="@+id/layoutNames"
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginTop="1dp"
-        android:orientation="horizontal"
         android:background="#21657A"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/line17">
+        app:layout_constraintTop_toBottomOf="@+id/page1line">
 
-                <TextView
-                    android:id="@+id/number"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="center"
-                    android:text="#"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="#"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/player_team"
-                    android:layout_width="250dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toStartOf="@+id/rebounts"
-                    android:layout_toEndOf="@+id/number"
-                    android:gravity="center"
-                    android:text="Παίκτης"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+        <TextView
+            android:id="@+id/player_team"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/rebounts"
+            android:layout_toEndOf="@+id/number"
+            android:gravity="center"
+            android:text="Παίκτης"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/rebounts"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toStartOf="@+id/assists"
-                    android:gravity="center"
-                    android:text="Ρι"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+        <TextView
+            android:id="@+id/rebounts"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/assists"
+            android:gravity="center"
+            android:text="Ρι"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/assists"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toStartOf="@+id/points"
-                    android:gravity="center"
-                    android:text="Ασ"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+        <TextView
+            android:id="@+id/assists"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/points"
+            android:gravity="center"
+            android:text="Ασ"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-                <TextView
-                    android:id="@+id/points"
-                    android:layout_width="50dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="center"
-                    android:text="Π"
-                    android:textColor="@color/white"
-                    android:textSize="18sp" />
+        <TextView
+            android:id="@+id/points"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="Π"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
-            </RelativeLayout>
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
