@@ -147,7 +147,7 @@ public class MySQL {
     {
         MySQLConnection mySQLConnection = new MySQLConnection();
         mySQLConnection.Select("SELECT players.name,players.position,team,rebounds,assists,three_points " +
-                "FROM statistics INNER JOIN players on players.name = statistics.name WHERE round="+getCurrentRound()+
+                "FROM statistics INNER JOIN players on players.name = statistics.name WHERE round="+Integer.valueOf(getCurrentRound()-1)+
                 " ORDER BY "+target+" DESC");
         MySQL.ThreadStart(mySQLConnection);
         return mySQLConnection.getResults();
