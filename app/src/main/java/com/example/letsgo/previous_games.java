@@ -51,7 +51,7 @@ public class previous_games extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                id = m.getRound();
+                id = m.getId();
                 gotomatches();
             }
         });
