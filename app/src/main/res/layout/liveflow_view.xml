@@ -56,6 +56,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/flowStart"
         app:layout_constraintEnd_toStartOf="@+id/flowStart"
+        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/flowStart">
 
@@ -65,16 +66,16 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="Rebound:"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Team1actionPlayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
+            android:gravity="start"
             android:text="Ioannis Papagiannis"
             android:textColor="@color/white"
-            android:gravity="start" />
+            android:textSize="12sp" />
 
 
     </LinearLayout>
@@ -87,6 +88,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/flowStart"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toEndOf="@+id/flowStart"
         app:layout_constraintTop_toTopOf="@+id/flowStart">
 
@@ -96,16 +98,16 @@
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="Shoot:"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Team2actionPlayer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
+            android:gravity="end"
             android:text="Giannoulhs Larentzakhs"
             android:textColor="@color/white"
-            android:gravity="start" />
+            android:textSize="12sp" />
 
 
     </LinearLayout>
