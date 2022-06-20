@@ -53,8 +53,9 @@ public class create_a_team extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = nameView.getText().toString();
-                if (name.equals("Όνομα Ομάδας"))
+                if (name.equals("Όνομα Ομάδας") || name.isEmpty())
                 {
+                    Toast.makeText(create_a_team.this,"Failed!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

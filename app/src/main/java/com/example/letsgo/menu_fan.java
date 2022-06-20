@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class menu_fan extends AppCompatActivity {
 
@@ -53,7 +54,12 @@ public class menu_fan extends AppCompatActivity {
         topfive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gototopfive();
+                if (MySQL.getCurrentRound()>1) {
+                    gototopfive();
+                }else
+                {
+                    Toast.makeText(menu_fan.this,"No data yet!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
