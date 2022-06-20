@@ -6,7 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class topfive extends AppCompatActivity {
 
@@ -24,12 +28,42 @@ public class topfive extends AppCompatActivity {
         });
 
         try{
-            ArrayList<String> topPlayersInfo = MySQL.getTopPlayers();
+            ArrayList<String> Player12 = MySQL.getTopPlayers("three_points");
+            ArrayList<String> Player34 = MySQL.getTopPlayers("assists");
+            ArrayList<String> Player5 = MySQL.getTopPlayers("rebounds");
 
-            //XEN
-            //ArrayList<String> topPlayersInfo = MySQL.getTopPlayers();
-            //topPlayersInfo.add(name);
+            ArrayList<String> topPlayersInfo = new ArrayList<>();
+            for (int i=0;i<12;i++)
+            {
+                topPlayersInfo.add(Player12.get(i));
+            }
 
+            for (int i=0;i<2;i++)
+            {
+                for (int j=0;j<Player34.size();j=j+6)
+                {
+                    if (!topPlayersInfo.contains(Player34.get(j)))
+                    {
+                        for (int k=j;k<j+6;k++)
+                        {
+                            topPlayersInfo.add(Player34.get(k));
+                        }
+                        break;
+                    }
+                }
+            }
+
+            for (int i=0;i<Player5.size();i=i+6)
+            {
+                if (!topPlayersInfo.contains(Player5.get(i)))
+                {
+                    for (int k=i;k<i+6;k++)
+                    {
+                        topPlayersInfo.add(Player5.get(k));
+                    }
+                    break;
+                }
+            }
 
             //1
             TextView t1 = findViewById(R.id.player1);
@@ -56,7 +90,7 @@ public class topfive extends AppCompatActivity {
             t6 = findViewById(R.id.Points2);
 
             i=i+6;
-            t1.setText(topPlayersInfo.get(0+i));
+            t1.setText(topPlayersInfo.get(i));
             t2.setText(topPlayersInfo.get(1+i));
             t3.setText(topPlayersInfo.get(2+i));
             t4.setText(topPlayersInfo.get(3+i));
@@ -72,7 +106,7 @@ public class topfive extends AppCompatActivity {
             t6 = findViewById(R.id.Points3);
 
             i=i+6;
-            t1.setText(topPlayersInfo.get(0+i));
+            t1.setText(topPlayersInfo.get(i));
             t2.setText(topPlayersInfo.get(1+i));
             t3.setText(topPlayersInfo.get(2+i));
             t4.setText(topPlayersInfo.get(3+i));
@@ -88,7 +122,7 @@ public class topfive extends AppCompatActivity {
             t6 = findViewById(R.id.Points4);
 
             i=i+6;
-            t1.setText(topPlayersInfo.get(0+i));
+            t1.setText(topPlayersInfo.get(i));
             t2.setText(topPlayersInfo.get(1+i));
             t3.setText(topPlayersInfo.get(2+i));
             t4.setText(topPlayersInfo.get(3+i));
@@ -104,13 +138,15 @@ public class topfive extends AppCompatActivity {
             t6 = findViewById(R.id.Points5);
 
             i=i+6;
-            t1.setText(topPlayersInfo.get(0+i));
+            t1.setText(topPlayersInfo.get(i));
             t2.setText(topPlayersInfo.get(1+i));
             t3.setText(topPlayersInfo.get(2+i));
             t4.setText(topPlayersInfo.get(3+i));
             t5.setText(topPlayersInfo.get(4+i));
             t6.setText(topPlayersInfo.get(5+i));
-        }catch (Exception e){}
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 
     private void gotomenu(){
