@@ -69,7 +69,7 @@
         <TextView
             android:id="@+id/team"
             android:layout_width="185dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:text="Ομάδα"
             android:textColor="@color/white"
@@ -81,7 +81,7 @@
         <TextView
             android:id="@+id/minutes"
             android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:text="Ν"
             android:textColor="@color/white"
@@ -92,7 +92,7 @@
         <TextView
             android:id="@+id/loses"
             android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:text="Η"
             android:textColor="@color/white"
@@ -103,7 +103,7 @@
         <TextView
             android:id="@+id/games"
             android:layout_width="40dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:text="Αγ"
             android:textColor="@color/white"
@@ -114,7 +114,7 @@
         <TextView
             android:id="@+id/points"
             android:layout_width="70dp"
-            android:layout_height="30dp"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:text="Βαθμ."
             android:textColor="@color/white"
