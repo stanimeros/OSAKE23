@@ -11,11 +11,21 @@
 
     <View
         android:id="@+id/page1line"
-        android:layout_width="205dp"
+        android:layout_width="0dp"
         android:layout_height="4dp"
         android:background="@android:color/holo_orange_dark"
         android:gravity="start|top"
+        app:layout_constraintEnd_toStartOf="@+id/page2line"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/page2line"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:gravity="start|top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/page1line"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView

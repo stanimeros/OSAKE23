@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class MySQL {
 
-    public static final int START_TIME = 2000;
+    public static final int START_TIME = 60000;
     public static final String IP = "192.168.2.99";
 
     public static MySQLConnection ThreadStart (MySQLConnection mySQL)
