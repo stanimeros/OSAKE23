@@ -50,64 +50,62 @@
 
     <LinearLayout
         android:id="@+id/Team1stage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:maxWidth="150dp"
         android:orientation="vertical"
+        android:paddingLeft="5dp"
         app:layout_constraintBottom_toBottomOf="@+id/flowStart"
         app:layout_constraintEnd_toStartOf="@+id/flowStart"
-        app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/flowStart">
 
         <TextView
             android:id="@+id/Team1action"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="Rebound:"
+            android:textStyle="bold"
             android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Team1actionPlayer"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="start"
             android:text="Ioannis Papagiannis"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/Team2stage"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:maxWidth="150dp"
+        android:paddingRight="5dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/flowStart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toEndOf="@+id/flowStart"
         app:layout_constraintTop_toTopOf="@+id/flowStart">
 
         <TextView
             android:id="@+id/Team2action"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="start"
             android:text="Shoot:"
+            android:textStyle="bold"
             android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/Team2actionPlayer"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
             android:text="Giannoulhs Larentzakhs"
             android:textColor="@color/white"
-            android:textSize="12sp" />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
