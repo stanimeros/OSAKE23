@@ -29,8 +29,9 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="50dp"
                 android:layout_marginTop="70dp"
                 android:background="#D3048185"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -57,9 +58,9 @@
 
             <Spinner
                 android:id="@+id/positionSpinner"
-                android:layout_width="315dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="30dp"
+                android:layout_margin="50dp"
                 android:background="#BA048185"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayout"
                 app:layout_constraintStart_toStartOf="@+id/linearLayout"
@@ -76,9 +77,9 @@
 
             <Spinner
                 android:id="@+id/teamSpinner"
-                android:layout_width="315dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="30dp"
+                android:layout_margin="50dp"
                 android:background="#BE048185"
                 app:layout_constraintEnd_toEndOf="@+id/positionSpinner"
                 app:layout_constraintStart_toStartOf="@+id/positionSpinner"
@@ -95,9 +96,9 @@
 
             <LinearLayout
                 android:id="@+id/player_photo"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="40dp"
+                android:layout_margin="50dp"
                 android:background="@color/teal_200"
                 app:layout_constraintEnd_toEndOf="@+id/teamSpinner"
                 app:layout_constraintStart_toStartOf="@+id/teamSpinner"
