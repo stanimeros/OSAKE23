@@ -59,7 +59,13 @@ public class menu_admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Championship c = new Championship();
-                displayToast();
+                if (c.isCreated())
+                {
+                    displayToast();
+                }else
+                {
+                    Toast.makeText(menu_admin.this,"Failed!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

@@ -69,6 +69,11 @@ public class create_a_player extends AppCompatActivity implements AdapterView.On
                     String name = nameView.getText().toString();
                     String path = pathView.getText().toString();
 
+                    if (name==null)
+                    {
+                        return;
+                    }
+
                     Player p = new Player(MySQL.getTeamId(spinner2.getSelectedItem().toString()),name,spinner.getSelectedItem().toString(),path);
                     p.createSQL();
                     displayToast();

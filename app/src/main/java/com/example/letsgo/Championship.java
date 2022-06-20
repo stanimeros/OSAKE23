@@ -6,6 +6,7 @@ import java.util.Collections;
 public class Championship {
      private ArrayList<String> teams = new ArrayList<>();
      private MySQLConnection mySQLConnection = new MySQLConnection();
+     private boolean isCreated = false;
 
     public Championship(){
 
@@ -15,6 +16,7 @@ public class Championship {
         teams = mySQLConnection.getResults();
         if (teams.size()>=2 && teams.size()%2==0)
         {
+            isCreated = true;
             mySQLConnection.Insert("TRUNCATE TABLE scoreboard");
             MySQL.ThreadStart(mySQLConnection);
 
@@ -80,5 +82,10 @@ public class Championship {
             }
         }
         return num;
+    }
+
+    public boolean isCreated()
+    {
+        return isCreated;
     }
 }
