@@ -3,8 +3,10 @@ package com.example.letsgo;
 import java.util.ArrayList;
 
 public class MySQL {
-
-    public static final int START_TIME = 60000;
+    //ΠΟΣΑ ΛΕΠΤΑ ΝΑ ΚΑΝΕΙ ΑΝΤΙΣΤΡΟΦΗ ΚΑΝΟΝΙΚΑ ΤΟ 10ΛΕΠΤΟ ΕΙΝΑΙ 600000
+    //ΓΙΑ ΝΑ ΟΛΟΚΛΗΡΩΝΕΤΑΙ ΓΡΗΓΟΡΑ Ο ΑΓΩΝΑΣ ΤΟ ΕΧΟΥΜΕ ΠΡΟΣΩΡΙΝΑ ΣΤΟ 30000
+    //ΔΗΛΑΔΗ ΝΑ ΞΕΚΙΝΑΕΙ ΣΤΟ 09:30 ΚΑΙ ΟΧΙ ΣΤΟ 00:00!
+    public static final int START_TIME = 30000;
     public static final String IP = "192.168.2.99";
 
     public static MySQLConnection ThreadStart (MySQLConnection mySQL)
